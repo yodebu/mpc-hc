@@ -24,7 +24,8 @@
 #include "AppSettings.h"
 #include "FGFilter.h"
 #include "FileAssoc.h"
-#include "MiniDump.h"
+#include "CrashReporter.h"
+#include "CrashReporterDialog.h"
 #include "VersionInfo.h"
 #include "SysVersion.h"
 #include "WinAPIUtils.h"
@@ -32,6 +33,7 @@
 #include "Translations.h"
 #include "UpdateChecker.h"
 #include "moreuuids.h"
+#include <mvrInterfaces.h>
 
 
 #pragma warning(push)
@@ -558,7 +560,8 @@ void CAppSettings::CreateCommands()
     wmcmds.AddTail({ID_DVD_SUB_PREV,                      0, FVIRTKEY | FNOINVERT,                    IDS_MPLAYERC_96});
     wmcmds.AddTail({ID_DVD_SUB_ONOFF,                     0, FVIRTKEY | FNOINVERT,                    IDS_MPLAYERC_97});
     wmcmds.AddTail({ID_VIEW_TEARING_TEST,               'T', FVIRTKEY | FCONTROL | FNOINVERT,         IDS_AG_TEARING_TEST});
-    wmcmds.AddTail({ID_VIEW_REMAINING_TIME,             'I', FVIRTKEY | FCONTROL | FNOINVERT,         IDS_MPLAYERC_98});
+    wmcmds.AddTail({ID_VIEW_OSD_DISPLAY_TIME,           'I', FVIRTKEY | FCONTROL | FNOINVERT,         IDS_OSD_DISPLAY_CURRENT_TIME});
+    wmcmds.AddTail({ID_VIEW_OSD_SHOW_FILENAME,          'N', FVIRTKEY | FNOINVERT,                    IDS_OSD_SHOW_FILENAME});
     wmcmds.AddTail({ID_SHADERS_PRESET_NEXT,               0, FVIRTKEY | FNOINVERT,                    IDS_AG_SHADERS_PRESET_NEXT});
     wmcmds.AddTail({ID_SHADERS_PRESET_PREV,               0, FVIRTKEY | FNOINVERT,                    IDS_AG_SHADERS_PRESET_PREV});
     wmcmds.AddTail({ID_D3DFULLSCREEN_TOGGLE,              0, FVIRTKEY | FNOINVERT,                    IDS_MPLAYERC_99});
@@ -566,8 +569,8 @@ void CAppSettings::CreateCommands()
     wmcmds.AddTail({ID_GOTO_NEXT_SUB,                   'U', FVIRTKEY | FNOINVERT,                    IDS_MPLAYERC_101});
     wmcmds.AddTail({ID_SHIFT_SUB_DOWN,              VK_NEXT, FVIRTKEY | FALT | FNOINVERT,             IDS_MPLAYERC_102});
     wmcmds.AddTail({ID_SHIFT_SUB_UP,               VK_PRIOR, FVIRTKEY | FALT | FNOINVERT,             IDS_MPLAYERC_103});
-    wmcmds.AddTail({ID_VIEW_DISPLAYSTATS,               'J', FVIRTKEY | FCONTROL | FNOINVERT,         IDS_AG_DISPLAY_STATS});
-    wmcmds.AddTail({ID_VIEW_RESETSTATS,                 'R', FVIRTKEY | FCONTROL | FALT | FNOINVERT,  IDS_AG_RESET_STATS});
+    wmcmds.AddTail({ID_VIEW_DISPLAY_RENDERER_STATS,     'J', FVIRTKEY | FCONTROL | FNOINVERT,         IDS_OSD_DISPLAY_RENDERER_STATS});
+    wmcmds.AddTail({ID_VIEW_RESET_RENDERER_STATS,       'R', FVIRTKEY | FCONTROL | FALT | FNOINVERT,  IDS_OSD_RESET_RENDERER_STATS});
     wmcmds.AddTail({ID_VIEW_VSYNC,                      'V', FVIRTKEY | FNOINVERT,                    IDS_AG_VSYNC});
     wmcmds.AddTail({ID_VIEW_ENABLEFRAMETIMECORRECTION,    0, FVIRTKEY | FNOINVERT,                    IDS_AG_ENABLEFRAMETIMECORRECTION});
     wmcmds.AddTail({ID_VIEW_VSYNCACCURATE,              'V', FVIRTKEY | FCONTROL | FALT | FNOINVERT,  IDS_AG_VSYNCACCURATE});
@@ -1204,6 +1207,13 @@ void CAppSettings::LoadSettings()
             language = 0;
         }
     }
+#ifndef DEBUG
+    if (language) {
+        auto pCrashReporterUIThread = CCrashReporterUIThread::GetInstance();
+        pCrashReporterUIThread->WaitThreadReady();
+        pCrashReporterUIThread->GetCrashDialog().LoadTranslatableResources();
+    }
+#endif
 
     CreateCommands();
 
@@ -2018,8 +2028,8 @@ void CAppSettings::ParseCommandLine(CAtlList<CString>& cmdln)
                 }
             } else if (sw == _T("debug")) {
                 fShowDebugInfo = true;
-            } else if (sw == _T("nominidump")) {
-                CMiniDump::Disable();
+            } else if (sw == _T("nocrashreporter")) {
+                CrashReporter::Disable();
             } else if (sw == _T("audiorenderer") && pos) {
                 SetAudioRenderer(_ttoi(cmdln.GetNext(pos)));
             } else if (sw == _T("shaderpreset") && pos) {

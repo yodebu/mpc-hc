@@ -154,6 +154,8 @@ struct SubtitleInput {
 };
 
 interface ISubClock;
+interface IMadVRSubclassReplacement;
+interface IMadVRSettings;
 
 class CMainFrame : public CFrameWnd, public CDropClient
 {
@@ -220,6 +222,7 @@ private:
     CComQIPtr<IMediaSeeking> m_pMS;
     CComQIPtr<IVideoFrameStep> m_pFS;
     CComQIPtr<IFileSourceFilter> m_pFSF;
+    CComQIPtr<IKeyFrameInfo> m_pKFI;
     CComQIPtr<IQualProp, &IID_IQualProp> m_pQP;
     CComQIPtr<IBufferInfo> m_pBI;
     CComQIPtr<IAMOpenProgress> m_pAMOP;
@@ -428,6 +431,10 @@ public:
         return (AfxGetAppSettings().fIntRealMedia && m_fRealMediaGraph || m_fShockwaveGraph);
     }
     bool IsD3DFullScreenMode() const;
+
+    bool IsSubresyncBarVisible() const {
+        return !!m_wndSubresyncBar.IsWindowVisible();
+    }
 
     CControlBar* m_pLastBar;
 
@@ -809,9 +816,9 @@ public:
     afx_msg void OnViewOptions();
     afx_msg void OnUpdateViewTearingTest(CCmdUI* pCmdUI);
     afx_msg void OnViewTearingTest();
-    afx_msg void OnUpdateViewDisplayStats(CCmdUI* pCmdUI);
-    afx_msg void OnViewResetStats();
-    afx_msg void OnViewDisplayStatsSC();
+    afx_msg void OnUpdateViewDisplayRendererStats(CCmdUI* pCmdUI);
+    afx_msg void OnViewResetRendererStats();
+    afx_msg void OnViewDisplayRendererStats();
     afx_msg void OnUpdateViewVSync(CCmdUI* pCmdUI);
     afx_msg void OnUpdateViewVSyncOffset(CCmdUI* pCmdUI);
     afx_msg void OnUpdateViewVSyncAccurate(CCmdUI* pCmdUI);
@@ -880,8 +887,10 @@ public:
     afx_msg void OnViewEnableFrameTimeCorrection();
     afx_msg void OnViewVSyncOffsetIncrease();
     afx_msg void OnViewVSyncOffsetDecrease();
-    afx_msg void OnUpdateViewRemainingTime(CCmdUI* pCmdUI);
-    afx_msg void OnViewRemainingTime();
+    afx_msg void OnUpdateViewOSDDisplayTime(CCmdUI* pCmdUI);
+    afx_msg void OnViewOSDDisplayTime();
+    afx_msg void OnUpdateViewOSDShowFileName(CCmdUI* pCmdUI);
+    afx_msg void OnViewOSDShowFileName();
     afx_msg void OnD3DFullscreenToggle();
     afx_msg void OnGotoSubtitle(UINT nID);
     afx_msg void OnShiftSubtitle(UINT nID);
@@ -972,7 +981,7 @@ public:
     CWnd*           m_pVideoWnd;            // Current Video (main display screen or 2nd)
     CFullscreenWnd* m_pFullscreenWnd;
     CVMROSD     m_OSD;
-    bool        m_bRemainingTime;
+    bool        m_bOSDDisplayTime;
     int         m_nCurSubtitle;
     long        m_lSubtitleShift;
     REFERENCE_TIME m_rtCurSubPos;

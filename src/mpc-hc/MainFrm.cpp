@@ -101,6 +101,9 @@
 #include "../Subtitles/RLECodedSubtitle.h"
 #include "../Subtitles/PGSSub.h"
 
+#include <mvrInterfaces.h>
+#include <SubRenderIntf.h>
+
 template<typename T>
 bool NEARLY_EQ(T a, T b, T tol)
 {
@@ -331,9 +334,9 @@ BEGIN_MESSAGE_MAP(CMainFrame, CFrameWnd)
     // Casimir666
     ON_UPDATE_COMMAND_UI(ID_VIEW_TEARING_TEST, OnUpdateViewTearingTest)
     ON_COMMAND(ID_VIEW_TEARING_TEST, OnViewTearingTest)
-    ON_UPDATE_COMMAND_UI(ID_VIEW_DISPLAYSTATS, OnUpdateViewDisplayStats)
-    ON_COMMAND(ID_VIEW_RESETSTATS, OnViewResetStats)
-    ON_COMMAND(ID_VIEW_DISPLAYSTATS, OnViewDisplayStatsSC)
+    ON_UPDATE_COMMAND_UI(ID_VIEW_DISPLAY_RENDERER_STATS, OnUpdateViewDisplayRendererStats)
+    ON_COMMAND(ID_VIEW_RESET_RENDERER_STATS, OnViewResetRendererStats)
+    ON_COMMAND(ID_VIEW_DISPLAY_RENDERER_STATS, OnViewDisplayRendererStats)
     ON_UPDATE_COMMAND_UI(ID_VIEW_FULLSCREENGUISUPPORT, OnUpdateViewFullscreenGUISupport)
     ON_UPDATE_COMMAND_UI(ID_VIEW_HIGHCOLORRESOLUTION, OnUpdateViewHighColorResolution)
     ON_UPDATE_COMMAND_UI(ID_VIEW_FORCEINPUTHIGHCOLORRESOLUTION, OnUpdateViewForceInputHighColorResolution)
@@ -416,8 +419,10 @@ BEGIN_MESSAGE_MAP(CMainFrame, CFrameWnd)
 
     ON_COMMAND(ID_VIEW_VSYNCOFFSET_INCREASE, OnViewVSyncOffsetIncrease)
     ON_COMMAND(ID_VIEW_VSYNCOFFSET_DECREASE, OnViewVSyncOffsetDecrease)
-    ON_UPDATE_COMMAND_UI(ID_VIEW_REMAINING_TIME, OnUpdateViewRemainingTime)
-    ON_COMMAND(ID_VIEW_REMAINING_TIME, OnViewRemainingTime)
+    ON_UPDATE_COMMAND_UI(ID_VIEW_OSD_DISPLAY_TIME, OnUpdateViewOSDDisplayTime)
+    ON_COMMAND(ID_VIEW_OSD_DISPLAY_TIME, OnViewOSDDisplayTime)
+    ON_UPDATE_COMMAND_UI(ID_VIEW_OSD_SHOW_FILENAME, OnUpdateViewOSDShowFileName)
+    ON_COMMAND(ID_VIEW_OSD_SHOW_FILENAME, OnViewOSDShowFileName)
     ON_COMMAND(ID_D3DFULLSCREEN_TOGGLE, OnD3DFullscreenToggle)
     ON_COMMAND_RANGE(ID_GOTO_PREV_SUB, ID_GOTO_NEXT_SUB, OnGotoSubtitle)
     ON_COMMAND_RANGE(ID_SHIFT_SUB_DOWN, ID_SHIFT_SUB_UP, OnShiftSubtitle)
@@ -721,7 +726,7 @@ CMainFrame::CMainFrame()
     , m_bTrayIcon(false)
     , m_pFullscreenWnd(nullptr)
     , m_pVideoWnd(nullptr)
-    , m_bRemainingTime(false)
+    , m_bOSDDisplayTime(false)
     , m_nCurSubtitle(-1)
     , m_lSubtitleShift(0)
     , m_nStepForwardCount(0)
@@ -1751,7 +1756,7 @@ void CMainFrame::OnTimer(UINT_PTR nIDEvent)
                             m_lSubtitleShift = 0;
                         }
 
-                        m_wndStatusBar.SetStatusTimer(rtNow, rtDur, !!m_wndSubresyncBar.IsWindowVisible(), GetTimeFormat());
+                        m_wndStatusBar.SetStatusTimer(rtNow, rtDur, IsSubresyncBarVisible(), GetTimeFormat());
                         break;
                     case PM_DVD:
                         g_bExternalSubtitleTime = true;
@@ -1774,7 +1779,7 @@ void CMainFrame::OnTimer(UINT_PTR nIDEvent)
                                 }
                             }
                         }
-                        m_wndStatusBar.SetStatusTimer(rtNow, rtDur, !!m_wndSubresyncBar.IsWindowVisible(), GetTimeFormat());
+                        m_wndStatusBar.SetStatusTimer(rtNow, rtDur, IsSubresyncBarVisible(), GetTimeFormat());
                         break;
                     case PM_ANALOG_CAPTURE:
                         g_bExternalSubtitleTime = true;
@@ -1823,7 +1828,7 @@ void CMainFrame::OnTimer(UINT_PTR nIDEvent)
                     case PM_FILE:
                     // no break
                     case PM_DVD:
-                        if (m_bRemainingTime) {
+                        if (m_bOSDDisplayTime) {
                             m_OSD.DisplayMessage(OSD_TOPLEFT, m_wndStatusBar.GetStatusTimer());
                         }
                         break;
@@ -1835,7 +1840,7 @@ void CMainFrame::OnTimer(UINT_PTR nIDEvent)
                             REFERENCE_TIME rtNow = REFERENCE_TIME(tNow - NowNext.startTime) * 10000000;
                             REFERENCE_TIME rtDur = REFERENCE_TIME(NowNext.duration) * 10000000;
                             m_wndStatusBar.SetStatusTimer(rtNow, rtDur, false, TIME_FORMAT_MEDIA_TIME);
-                            if (m_bRemainingTime) {
+                            if (m_bOSDDisplayTime) {
                                 m_OSD.DisplayMessage(OSD_TOPLEFT, m_wndStatusBar.GetStatusTimer());
                             }
                         } else {
@@ -5378,7 +5383,7 @@ void CMainFrame::OnViewTearingTest()
     AfxGetMyApp()->m_Renderers.m_bTearingTest = !AfxGetMyApp()->m_Renderers.m_bTearingTest;
 }
 
-void CMainFrame::OnUpdateViewDisplayStats(CCmdUI* pCmdUI)
+void CMainFrame::OnUpdateViewDisplayRendererStats(CCmdUI* pCmdUI)
 {
     const CAppSettings& s = AfxGetAppSettings();
     bool supported = (s.iDSVideoRendererType == VIDRNDT_DS_VMR9RENDERLESS
@@ -5389,12 +5394,12 @@ void CMainFrame::OnUpdateViewDisplayStats(CCmdUI* pCmdUI)
     pCmdUI->SetCheck(supported && AfxGetMyApp()->m_Renderers.m_iDisplayStats);
 }
 
-void CMainFrame::OnViewResetStats()
+void CMainFrame::OnViewResetRendererStats()
 {
     AfxGetMyApp()->m_Renderers.m_bResetStats = true; // Reset by "consumer"
 }
 
-void CMainFrame::OnViewDisplayStatsSC()
+void CMainFrame::OnViewDisplayRendererStats()
 {
     const CAppSettings& s = AfxGetAppSettings();
     bool supported = (s.iDSVideoRendererType == VIDRNDT_DS_VMR9RENDERLESS
@@ -6130,22 +6135,65 @@ void CMainFrame::OnViewVSyncOffsetDecrease()
     m_OSD.DisplayMessage(OSD_TOPRIGHT, strOSD);
 }
 
-void CMainFrame::OnUpdateViewRemainingTime(CCmdUI* pCmdUI)
+void CMainFrame::OnUpdateViewOSDDisplayTime(CCmdUI* pCmdUI)
 {
     const CAppSettings& s = AfxGetAppSettings();
-    pCmdUI->Enable(s.fShowOSD && (GetLoadState() != MLS::CLOSED));
-    pCmdUI->SetCheck(m_bRemainingTime);
+    pCmdUI->Enable(s.fShowOSD && GetLoadState() != MLS::CLOSED);
+    pCmdUI->SetCheck(m_bOSDDisplayTime);
 }
 
-void CMainFrame::OnViewRemainingTime()
+void CMainFrame::OnViewOSDDisplayTime()
 {
-    m_bRemainingTime = !m_bRemainingTime;
+    m_bOSDDisplayTime = !m_bOSDDisplayTime;
 
-    if (!m_bRemainingTime) {
+    if (!m_bOSDDisplayTime) {
         m_OSD.ClearMessage();
     }
 
     OnTimer(TIMER_STREAMPOSPOLLER2);
+}
+
+void CMainFrame::OnUpdateViewOSDShowFileName(CCmdUI* pCmdUI)
+{
+    const CAppSettings& s = AfxGetAppSettings();
+    pCmdUI->Enable(s.fShowOSD && GetLoadState() != MLS::CLOSED);
+}
+
+void CMainFrame::OnViewOSDShowFileName()
+{
+    CString strOSD;
+    switch (GetPlaybackMode()) {
+        case PM_FILE:
+            strOSD = GetFileName();
+            break;
+        case PM_DVD:
+            strOSD = _T("DVD");
+            if (m_pDVDI) {
+                CString path;
+                ULONG len = 0;
+                if (SUCCEEDED(m_pDVDI->GetDVDDirectory(path.GetBuffer(MAX_PATH), MAX_PATH, &len)) && len) {
+                    path.ReleaseBuffer();
+                    if (path.Find(_T("\\VIDEO_TS")) == 2) {
+                        strOSD.AppendFormat(_T(" - %s"), GetDriveLabel(CPath(path)));
+                    } else {
+                        strOSD.AppendFormat(_T(" - %s"), path);
+                    }
+                }
+            }
+            break;
+        case PM_ANALOG_CAPTURE:
+            strOSD = GetCaptureTitle();
+            break;
+        case PM_DIGITAL_CAPTURE:
+            UpdateCurrentChannelInfo(true, false);
+            break;
+        default: // Shouldn't happen
+            ASSERT(FALSE);
+            return;
+    }
+    if (!strOSD.IsEmpty()) {
+        m_OSD.DisplayMessage(OSD_TOPLEFT, strOSD);
+    }
 }
 
 void CMainFrame::OnD3DFullscreenToggle()
@@ -7126,7 +7174,7 @@ void CMainFrame::OnPlayStop()
             __int64 start, stop;
             m_wndSeekBar.GetRange(start, stop);
             if (!IsPlaybackCaptureMode()) {
-                m_wndStatusBar.SetStatusTimer(m_wndSeekBar.GetPos(), stop, !!m_wndSubresyncBar.IsWindowVisible(), GetTimeFormat());
+                m_wndStatusBar.SetStatusTimer(m_wndSeekBar.GetPos(), stop, IsSubresyncBarVisible(), GetTimeFormat());
             }
 
             SetAlwaysOnTop(AfxGetAppSettings().iOnTop);
@@ -8568,7 +8616,7 @@ void CMainFrame::OnNavigateMenuItem(UINT nID)
                 m_pDVDC->SelectRelativeButton(DVD_Relative_Lower);
                 break;
             case 4:
-                if (m_iDVDDomain != DVD_DOMAIN_Title) { // Casimir666 : for the remote control
+                if (m_iDVDDomain == DVD_DOMAIN_Title || m_iDVDDomain == DVD_DOMAIN_VideoTitleSetMenu || m_iDVDDomain == DVD_DOMAIN_VideoManagerMenu) {
                     m_pDVDC->ActivateButton();
                 } else {
                     OnPlayPlay();
@@ -10434,13 +10482,16 @@ void CMainFrame::OpenFile(OpenFileData* pOFD)
 
         if (bMainFile) {
             pOFD->title = fn;
-            if (!(m_pFSF = m_pGB)) {
-                BeginEnumFilters(m_pGB, pEF, pBF);
-                if (m_pFSF = pBF) {
-                    break;
-                }
-                EndEnumFilters;
+
+            m_pFSF = m_pGB;
+            BeginEnumFilters(m_pGB, pEF, pBF);
+            if (!m_pFSF) {
+                m_pFSF = pBF;
             }
+            if (!m_pKFI) {
+                m_pKFI = pBF;
+            }
+            EndEnumFilters;
         }
 
         bMainFile = false;
@@ -11902,6 +11953,7 @@ void CMainFrame::CloseMediaPrivate()
     m_pME.Release();
     m_pMC.Release();
     m_pFSF.Release();
+    m_pKFI.Release();
 
     if (m_pGB) {
         m_pGB->RemoveFromROT();
@@ -13695,18 +13747,12 @@ bool CMainFrame::GetNeighbouringKeyFrames(REFERENCE_TIME rtTarget, std::pair<REF
 
 void CMainFrame::LoadKeyFrames()
 {
-    CComQIPtr<IKeyFrameInfo> pKFI;
-    BeginEnumFilters(m_pGB, pEF, pBF);
-    if (pKFI = pBF) {
-        break;
-    }
-    EndEnumFilters;
     UINT nKFs = 0;
     m_kfs.clear();
-    if (pKFI && S_OK == pKFI->GetKeyFrameCount(nKFs) && nKFs > 1) {
+    if (m_pKFI && S_OK == m_pKFI->GetKeyFrameCount(nKFs) && nKFs > 1) {
         UINT k = nKFs;
         m_kfs.resize(k);
-        if (FAILED(pKFI->GetKeyFrames(&TIME_FORMAT_MEDIA_TIME, m_kfs.data(), k)) || k != nKFs) {
+        if (FAILED(m_pKFI->GetKeyFrames(&TIME_FORMAT_MEDIA_TIME, m_kfs.data(), k)) || k != nKFs) {
             m_kfs.clear();
         }
     }
@@ -13753,7 +13799,7 @@ void CMainFrame::SeekTo(REFERENCE_TIME rtPos, bool bShowOSD /*= true*/)
         if (rtPos > stop) {
             rtPos = stop;
         }
-        m_wndStatusBar.SetStatusTimer(rtPos, stop, !!m_wndSubresyncBar.IsWindowVisible(), GetTimeFormat());
+        m_wndStatusBar.SetStatusTimer(rtPos, stop, IsSubresyncBarVisible(), GetTimeFormat());
 
         if (bShowOSD) {
             m_OSD.DisplayMessage(OSD_TOPLEFT, m_wndStatusBar.GetStatusTimer(), 1500);

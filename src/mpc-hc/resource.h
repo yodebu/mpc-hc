@@ -576,7 +576,8 @@
 #define IDS_SUBTITLES_STYLES_CAPTION    14201
 #define IDS_TEXT_SUB_RENDERING_TARGET   14202
 #define IDD_TUNER_SCAN                  20002
-#define IDS_AG_RESET_STATS              20004
+#define IDS_OSD_DISPLAY_RENDERER_STATS  20003
+#define IDS_OSD_RESET_RENDERER_STATS    20004
 #define IDD_NAVIGATION_DLG              20005
 #define IDD_PPAGESUBMISC                20006
 #define IDS_VIEW_BORDERLESS             20007
@@ -589,6 +590,7 @@
 #define IDD_PPAGEADVANCED               20014
 #define IDD_SAVEIMAGEDIALOGTEMPL        20015
 #define IDD_CMD_LINE_HELP               20016
+#define IDD_CRASH_REPORTER              20017
 #define IDC_FULLSCREEN_MONITOR_CHECK    22002
 #define IDC_SLI_CONTRAST                22003
 #define IDC_RESET                       22004
@@ -684,13 +686,15 @@
 #define ID_VIEW_TEARING_TEST            32769
 #define ID_FILE_OPENDISC                32774
 #define ID_SHADERS                      32775
-#define ID_VIEW_REMAINING_TIME          32778
+#define ID_VIEW_OSD_DISPLAY_TIME        32777
+#define ID_VIEW_OSD_SHOW_FILENAME       32778
 #define ID_D3DFULLSCREEN_TOGGLE         32779
 #define ID_GOTO_PREV_SUB                32780
 #define ID_GOTO_NEXT_SUB                32781
 #define ID_SHIFT_SUB_DOWN               32782
 #define ID_SHIFT_SUB_UP                 32783
-#define ID_VIEW_DISPLAYSTATS            32784
+#define ID_VIEW_DISPLAY_RENDERER_STATS  32784
+#define ID_VIEW_RESET_RENDERER_STATS    32785
 #define IDS_AG_CLOSE                    32830
 #define IDS_AG_NONE                     32832
 #define IDS_AG_COMMAND                  32833
@@ -800,14 +804,14 @@
 #define IDS_MPLAYERC_95                 32972
 #define IDS_MPLAYERC_96                 32973
 #define IDS_MPLAYERC_97                 32974
-#define IDS_MPLAYERC_98                 32975
+#define IDS_OSD_DISPLAY_CURRENT_TIME    32975
 #define IDS_MPLAYERC_99                 32976
 #define IDS_MPLAYERC_100                32977
 #define IDS_MPLAYERC_101                32978
 #define IDS_MPLAYERC_102                32979
 #define IDS_MPLAYERC_103                32980
-#define IDS_AG_DISPLAY_STATS            32981
 #define IDS_AG_SEEKSET                  32982
+#define IDS_OSD_SHOW_FILENAME           32983
 #define IDS_PPAGEWEBSERVER_0            32996
 #define IDS_MAINFRM_2                   33014
 #define IDS_AG_SUBTITLES_SAVED          33015
@@ -996,7 +1000,6 @@
 #define IDS_NAVIGATE_TUNERSCAN          33401
 #define IDS_SUBTITLES_ERROR             33402
 #define IDC_CHECK_WIN7                  33403
-#define ID_VIEW_RESETSTATS              33405
 #define ID_VIEW_SYNCHRONIZEVIDEO        33408
 #define ID_VIEW_SYNCHRONIZEDISPLAY      33409
 #define ID_VIEW_SYNCHRONIZENEAREST      33410
@@ -1474,7 +1477,7 @@
 //
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        20017
+#define _APS_NEXT_RESOURCE_VALUE        20018
 #define _APS_NEXT_COMMAND_VALUE         33449
 #define _APS_NEXT_CONTROL_VALUE         22081
 #define _APS_NEXT_SYMED_VALUE           24044

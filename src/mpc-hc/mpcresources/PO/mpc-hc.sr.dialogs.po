@@ -111,7 +111,7 @@ msgid "Enable custom channel mapping"
 msgstr "Мапирање прилагођених канала"
 
 msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_STATIC1"
-msgid "Speaker configuration for "
+msgid "Speaker configuration for"
 msgstr "Подешавање звучника за"
 
 msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_STATIC2"
@@ -119,7 +119,7 @@ msgid "input channels:"
 msgstr "улазна канала:"
 
 msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_STATIC3"
-msgid "Hold shift for immediate changes when clicking something "
+msgid "Hold shift for immediate changes when clicking something"
 msgstr "Држите Shift да бисте измене видели одмах након клика."
 
 msgctxt "IDD_GOTO_DLG_CAPTION"
@@ -1665,4 +1665,28 @@ msgstr "Помоћ око командне линије"
 msgctxt "IDD_CMD_LINE_HELP_IDOK"
 msgid "OK"
 msgstr "&У реду"
+
+msgctxt "IDD_CRASH_REPORTER_CAPTION"
+msgid "Crash reporter"
+msgstr ""
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC1"
+msgid "We are sorry, it seems MPC-HC just crashed. :(\n\nTo help us diagnose and fix the problem, a bug report will be sent. You can provide additional information if you want."
+msgstr ""
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC2"
+msgid "Email:"
+msgstr ""
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC3"
+msgid "Your email address is optional and will only be used if the developers need to contact you for more information."
+msgstr ""
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC4"
+msgid "Problem description (use English only):"
+msgstr ""
+
+msgctxt "IDD_CRASH_REPORTER_IDOK"
+msgid "OK"
+msgstr ""
 

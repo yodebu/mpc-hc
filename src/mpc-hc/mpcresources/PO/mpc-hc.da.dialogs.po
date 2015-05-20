@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MPC-HC\n"
 "POT-Creation-Date: 2015-03-16 18:09:30+0000\n"
-"PO-Revision-Date: 2015-04-12 02:15+0000\n"
-"Last-Translator: Underground78\n"
+"PO-Revision-Date: 2015-05-15 18:12+0000\n"
+"Last-Translator: scootergrisen\n"
 "Language-Team: Danish (http://www.transifex.com/projects/p/mpc-hc/language/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -107,23 +107,23 @@ msgstr "Down-sample til 44100 Hz"
 
 msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_CHECK4"
 msgid "Audio time shift (ms):"
-msgstr "Lydforskydelse (ms):"
+msgstr "Forskydelse af lyd (ms):"
 
 msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_CHECK1"
 msgid "Enable custom channel mapping"
 msgstr "Aktivér brugerdefineret kanalkort"
 
 msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_STATIC1"
-msgid "Speaker configuration for "
-msgstr "Højtaleropsætning til "
+msgid "Speaker configuration for"
+msgstr "Højtaleropsætning til"
 
 msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_STATIC2"
 msgid "input channels:"
 msgstr "indgangskanaler:"
 
 msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_STATIC3"
-msgid "Hold shift for immediate changes when clicking something "
-msgstr "Hold skift-knappen nede mens du klikker, for at foretage hurtige ændringer "
+msgid "Hold shift for immediate changes when clicking something"
+msgstr "Hold skift-knappen nede mens du klikker, for at foretage ændringer med det samme"
 
 msgctxt "IDD_GOTO_DLG_CAPTION"
 msgid "Go To..."
@@ -1147,7 +1147,7 @@ msgstr "Vælg D3D9 rendere enhed"
 
 msgctxt "IDD_PPAGEOUTPUT_IDC_RESETDEVICE"
 msgid "Reinitialize when changing display"
-msgstr "Geninitialiser ved ændring af visning"
+msgstr "Initialiser igen ved ændring af visning"
 
 msgctxt "IDD_PPAGEOUTPUT_IDC_FULLSCREEN_MONITOR_CHECK"
 msgid "D3D Fullscreen"
@@ -1643,7 +1643,7 @@ msgstr "PS 3.0"
 
 msgctxt "IDD_PPAGEADVANCED_IDC_STATIC"
 msgid "Advanced Settings, do not edit unless you know what you are doing."
-msgstr "Avanceret indstillinger, undlad at redigere med mindre du ved hvad du gør."
+msgstr "Avancerede indstillinger, undlad at redigere med mindre du ved hvad du gør."
 
 msgctxt "IDD_PPAGEADVANCED_IDC_RADIO1"
 msgid "True"
@@ -1668,4 +1668,28 @@ msgstr "Kommandolinje hjælp"
 msgctxt "IDD_CMD_LINE_HELP_IDOK"
 msgid "OK"
 msgstr "OK"
+
+msgctxt "IDD_CRASH_REPORTER_CAPTION"
+msgid "Crash reporter"
+msgstr ""
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC1"
+msgid "We are sorry, it seems MPC-HC just crashed. :(\n\nTo help us diagnose and fix the problem, a bug report will be sent. You can provide additional information if you want."
+msgstr ""
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC2"
+msgid "Email:"
+msgstr ""
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC3"
+msgid "Your email address is optional and will only be used if the developers need to contact you for more information."
+msgstr ""
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC4"
+msgid "Problem description (use English only):"
+msgstr ""
+
+msgctxt "IDD_CRASH_REPORTER_IDOK"
+msgid "OK"
+msgstr ""
 

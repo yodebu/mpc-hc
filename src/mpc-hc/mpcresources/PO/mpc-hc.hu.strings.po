@@ -1,14 +1,15 @@
 # MPC-HC - Strings extracted from string tables
-# Copyright (C) 2002 - 2015 see Authors.txt
+# Copyright (C) 2002 - 2013 see Authors.txt
 # This file is distributed under the same license as the MPC-HC package.
 # Translators:
-# Máté <lang.mate@gmail.com>, 2014
+# Fridrich Losonszki <losonszki@gmail.com>, 2015
+# Máté <lang.mate@gmail.com>, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: MPC-HC\n"
-"POT-Creation-Date: 2014-10-30 22:04:38+0000\n"
-"PO-Revision-Date: 2014-12-02 20:10+0000\n"
-"Last-Translator: Underground78\n"
+"POT-Creation-Date: 2015-05-15 16:53:42+0000\n"
+"PO-Revision-Date: 2015-05-18 06:52+0000\n"
+"Last-Translator: Fridrich Losonszki <losonszki@gmail.com>\n"
 "Language-Team: Hungarian (http://www.transifex.com/projects/p/mpc-hc/language/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -82,7 +83,7 @@ msgstr "Idő"
 
 msgctxt "IDS_STATSBAR_SYNC_OFFSET"
 msgid "Sync Offset"
-msgstr ""
+msgstr "Szinkronizáció eltolás"
 
 msgctxt "IDS_STATSBAR_SYNC_OFFSET_FORMAT"
 msgid "avg: %d ms, dev: %d ms"
@@ -198,7 +199,7 @@ msgstr "Navigációs sáv"
 
 msgctxt "IDS_SUBRESYNC_CAPTION"
 msgid "Subresync"
-msgstr ""
+msgstr "Feliratidőzítés"
 
 msgctxt "IDS_SUBRESYNC_CLN_TIME"
 msgid "Time"
@@ -214,7 +215,7 @@ msgstr "Előnézet"
 
 msgctxt "IDS_SUBRESYNC_CLN_VOB_ID"
 msgid "Vob ID"
-msgstr ""
+msgstr "Vob azonosító"
 
 msgctxt "IDS_SUBRESYNC_CLN_CELL_ID"
 msgid "Cell ID"
@@ -258,7 +259,7 @@ msgstr ""
 
 msgctxt "IDS_CAPTURE_ERROR_DEVICE"
 msgid "Could not open capture device."
-msgstr ""
+msgstr "Nem nyitható meg rögzítő eszköz"
 
 msgctxt "IDS_INVALID_PARAMS_ERROR"
 msgid "Can't open, invalid input parameters"
@@ -266,7 +267,7 @@ msgstr ""
 
 msgctxt "IDS_EDIT_LIST_EDITOR"
 msgid "Edit List Editor"
-msgstr ""
+msgstr "Lista Szerkesztő szerkesztése"
 
 msgctxt "IDS_GOTO_ERROR_INVALID_TIME"
 msgid "The entered time is greater than the file duration."
@@ -1246,7 +1247,7 @@ msgstr "Lejátszási sebesség"
 
 msgctxt "IDS_FILTERS_COPY_TO_CLIPBOARD"
 msgid "&Copy filters list to clipboard"
-msgstr ""
+msgstr "Szűrő lista másolása a vágólapra"
 
 msgctxt "IDS_CREDENTIALS_SERVER"
 msgid "Enter server credentials"
@@ -1358,7 +1359,7 @@ msgstr "Mindegyik eltávolítása"
 
 msgctxt "IDS_REMOVE_CHANNELS_QUESTION"
 msgid "Are you sure you want to remove all channels from the list?"
-msgstr ""
+msgstr "Biztosan törölni szeretnéd az összes csatornát a listából?"
 
 msgctxt "IDS_MEDIAINFO_NO_INFO_AVAILABLE"
 msgid "No information available"
@@ -1374,15 +1375,15 @@ msgstr "AR %d:%d"
 
 msgctxt "IDS_PPAGEADVANCED_LOGGER"
 msgid "Enables logging to file. (require restart)"
-msgstr ""
+msgstr "Fájlba naplózás engedélyezése. (Újraindítást igényel)"
 
 msgctxt "IDS_TIMER_REMAINING_TIME"
 msgid "Remaining time"
-msgstr ""
+msgstr "Hátralévő idő"
 
 msgctxt "IDS_TIMER_HIGH_PRECISION"
 msgid "High precision"
-msgstr ""
+msgstr "Nagy pontosság"
 
 msgctxt "IDS_AG_OPEN_DEVICE"
 msgid "Open Device"
@@ -1538,7 +1539,7 @@ msgstr "Ikonképek mentése sikeres"
 
 msgctxt "IDS_MENU_VIDEO_STREAM"
 msgid "&Video Track"
-msgstr ""
+msgstr "Videó sáv"
 
 msgctxt "IDS_MENU_VIDEO_ANGLE"
 msgid "Video Ang&le"
@@ -1574,7 +1575,7 @@ msgstr "Exportálás nem sikerült! Ez akkor történhet, ha nincs megfelelő jo
 
 msgctxt "IDS_BDA_ERROR"
 msgid "BDA Error"
-msgstr ""
+msgstr "BDA hiba"
 
 msgctxt "IDS_AG_DECREASE_RATE"
 msgid "Decrease Rate"
@@ -1660,13 +1661,45 @@ msgctxt "IDS_MPLAYERC_103"
 msgid "Shift Subtitle Right"
 msgstr "Felirat jobbra tolása"
 
-msgctxt "IDS_AG_DISPLAY_STATS"
-msgid "Display Stats"
-msgstr "Statisztika megjelenítése"
-
 msgctxt "IDS_AG_SEEKSET"
 msgid "Jump to Beginning"
 msgstr "Ugrás az elejére"
+
+msgctxt "IDS_OSD_SHOW_FILENAME"
+msgid "OSD: Show File Name"
+msgstr ""
+
+msgctxt "IDS_OSD_DISPLAY_RENDERER_STATS"
+msgid "OSD: Display Renderer Statistics"
+msgstr ""
+
+msgctxt "IDS_OSD_RESET_RENDERER_STATS"
+msgid "OSD: Reset Renderer Statistics"
+msgstr ""
+
+msgctxt "IDD_PPAGESUBMISC"
+msgid "Subtitles::Misc"
+msgstr "Feliratok::Egyéb"
+
+msgctxt "IDS_VIEW_BORDERLESS"
+msgid "Hide &borders"
+msgstr "Ablakszegély elrejtése"
+
+msgctxt "IDS_VIEW_FRAMEONLY"
+msgid "Fra&me Only"
+msgstr "Csak a keret megjelenítése"
+
+msgctxt "IDS_VIEW_CAPTIONMENU"
+msgid "Sho&w Caption&&Menu"
+msgstr "Címsor és Menüsor megjelenítése"
+
+msgctxt "IDS_VIEW_HIDEMENU"
+msgid "Hide &Menu"
+msgstr "Menüsor elrejtése"
+
+msgctxt "IDD_PPAGEADVANCED"
+msgid "Advanced"
+msgstr "Haladó"
 
 msgctxt "IDS_AG_VIEW_MINIMAL"
 msgid "View Minimal"
@@ -1738,7 +1771,7 @@ msgstr "Felirat(ok) letöltése, kérem várjon."
 
 msgctxt "IDS_SUBDL_DLG_PARSING"
 msgid "Parsing list..."
-msgstr ""
+msgstr "Elemzési lista..."
 
 msgctxt "IDS_SUBDL_DLG_NOT_FOUND"
 msgid "No subtitles found."
@@ -1902,11 +1935,11 @@ msgstr "Főnök Gomb"
 
 msgctxt "IDS_MPLAYERC_77"
 msgid "Player Menu"
-msgstr ""
+msgstr "Lejátszó menü"
 
 msgctxt "IDS_MPLAYERC_78"
 msgid "Player Menu (full)"
-msgstr ""
+msgstr "Lejátszó menü (teljes)"
 
 msgctxt "IDS_AG_FILTERS_MENU"
 msgid "Filters Menu"
@@ -1984,9 +2017,9 @@ msgctxt "IDS_MPLAYERC_97"
 msgid "On/Off Subtitle (DVD)"
 msgstr "Felirat Ki-Bekapcsolása (DVD)"
 
-msgctxt "IDS_MPLAYERC_98"
-msgid "Remaining Time"
-msgstr "Hátralévő idő"
+msgctxt "IDS_OSD_DISPLAY_CURRENT_TIME"
+msgid "OSD: Display Current Time"
+msgstr ""
 
 msgctxt "IDS_PPAGEWEBSERVER_0"
 msgid "Select the directory"
@@ -2525,8 +2558,8 @@ msgid "Volume boost Max"
 msgstr "Hangerő erősítés Max"
 
 msgctxt "IDS_USAGE"
-msgid "Usage: mpc-hc.exe \"pathname\" [switches]\n\n\"pathname\"\tThe main file or directory to be loaded (wildcards\n\t\tallowed, \"-\" denotes standard input)\n/dub \"dubname\"\tLoad an additional audio file\n/dubdelay \"file\"\tLoad an additional audio file shifted with XXms (if\n\t\tthe file contains \"...DELAY XXms...\")\n/d3dfs\t\tStart rendering in D3D fullscreen mode\n/sub \"subname\"\tLoad an additional subtitle file\n/filter \"filtername\"\tLoad DirectShow filters from a dynamic link\n\t\tlibrary (wildcards allowed)\n/dvd\t\tRun in dvd mode, \"pathname\" means the dvd\n\t\tfolder (optional)\n/dvdpos T#C\tStart playback at title T, chapter C\n/dvdpos T#hh:mm\tStart playback at title T, position hh:mm:ss\n/cd\t\tLoad all the tracks of an audio cd or (s)vcd,\n\t\t\"pathname\" means the drive path (optional)\n/device\t\tOpen the default video device\n/open\t\tOpen the file, don't automatically start playback\n/play\t\tStart playing the file as soon the player is\n\t\tlaunched\n/close\t\tClose the player after playback (only works when\n\t\tused with /play)\n/shutdown\tShutdown the operating system after playback\n/standby\t\tPut the operating system in standby mode after playback\n/hibernate\tHibernate operating system after playback\n/logoff\t\tLog off after playback\n/lock\t\tLock workstation after playback\n/monitoroff\tTurn off the monitor after playback\n/playnext\t\tOpen next file in the folder after playback\n/fullscreen\tStart in full-screen mode\n/minimized\tStart in minimized mode\n/new\t\tUse a new instance of the player\n/add\t\tAdd \"pathname\" to playlist, can be combined\n\t\twith /open and /play\n/randomize\tRandomize the playlist\n/regvid\t\tCreate file associations for video files\n/regaud\t\tCreate file associations for audio files\n/regpl\t\tCreate file associations for playlist files\n/regall\t\tCreate file associations for all supported file types\n/unregall\t\tRemove all file associations\n/start ms\t\tStart playing at \"ms\" (= milliseconds)\n/startpos hh:mm:ss\tStart playing at position hh:mm:ss\n/fixedsize w,h\tSet a fixed window size\n/monitor N\tStart player on monitor N, where N starts from 1\n/audiorenderer N\tStart using audiorenderer N, where N starts from 1\n\t\t(see \"Output\" settings)\n/shaderpreset \"Pr\"\tStart using \"Pr\" shader preset\n/pns \"name\"\tSpecify Pan&Scan preset name to use\n/iconsassoc\tReassociate format icons\n/nofocus\t\tOpen MPC-HC in background\n/webport N\tStart web interface on specified port\n/debug\t\tShow debug information in OSD\n/nominidump\tDisable minidump creation\n/slave \"hWnd\"\tUse MPC-HC as slave\n/reset\t\tRestore default settings\n/help /h /?\tShow help about command line switches\n"
-msgstr "Használat: mpc-hc.exe \"pathname\" [kapcsolók]\n\n\"pathname\"\tA fő betöltendő fájl vagy mappa helye (spec. helyettesítő karakterek \n\t\tengedélyezve, \"-\" denotes standard input)\n/dub \"dubname\"\tBetölt egy külön audió fájlt\n/dubdelay \"file\"\tBetölt egy külön audió fájlt XX ms-al eltolva (ha a\n\t\tfájl tartalmaz \"...DELAY XXms...\")\n/d3dfs\t\tlejátszó indítása D3D teljes képernyős módban\n/sub \"subname\"\tBetölt egy külön felirat fájlt\n/filter \"filtername\"\tDirectShow szűrőket tölt be egy dynamic link\n\t\tlibrary-ból (spec. helyettesítő karakterek tengedélyezve)\n/dvd\t\tDVD módban való futtatás, a \"pathname\" a dvd \n\t\tmappáját jelenti (opcionális)\n/dvdpos T#C\tStart playback at title T, chapter C\n/dvdpos T#hh:mm\tStart playback at title T, position hh:mm:ss\n/cd\t\tBetölti egy audió CD vagy egy (s)vcd összes műsorszámát, a\n\t\t\"pathname\" a meghajtó betűjelét jelenti (opcionális)\n/device\t\tOpen the default video device\n/open\t\tMegnyitja a fájlt, de nem kezdi el automatikusan eljátszani\n/play\t\tKezdje el lejátszani a fájlt, amint a lejátszó\n\t\telindul\n/close\t\tZárja be a lejátszót a műsör befejeződése után (csak a /play kapcsolóval\n\t\tegyütt használható)\n/shutdown\tÁllítsa le a rendszert a műsor lejátszásának befejeződése után\n/standby\t\tPut the operating system in standby mode after playback\n/hibernate\tHibernate operating system after playback\n/logoff\t\tLog off after playback\n/lock\t\tLock workstation after playback\n/monitoroff\tTurn off the monitor after playback\n/playnext\t\tOpen next file in the folder after playback\n/fullscreen\tIndítás teljes képernyős módban\n/minimized\tMinimalizált formában való indítás\n/new\t\tA lejátszó egy új példányának használata\n/add\t\tA \"pathname\" hozzáadása a lejátszási listához, összekombinálható \n\t\taz /open és /play kapcsolóval\n/randomize\tRandomize the playlist\n/regvid\t\tVideó formátumok beregisztrálása\n/regaud\t\tAudió formátumok beregisztrálása\n/regpl\t\tCreate file associations for playlist files\n/regall\t\tCreate file associations for all supported file types\n/unregall\t\tVideó formátumok beregisztráltságának megszüntetése\n/start ms\t\tX \"ms\" (= ezredmásodperc) után induljon a lejátszás\n/startpos hh:mm:ss\tStart playing at position hh:mm:ss\n/fixedsize w,h\tFix ablakméret beállítása\n/monitor N\tIndítás az N. monitoron, ahol N egytől indul\n/audiorenderer N\tN. audió átalakító használata, ahol N egytől indul\n\t\t(lásd \"Kimenet\" beállítások)\n/shaderpreset \"Pr\"\tStart using \"Pr\" shader preset\n/pns \"name\"\tSpecify Pan&Scan preset name to use\n/iconsassoc\tReassociate format icons\n/nofocus\t\tOpen MPC-HC in background\n/webport N\tStart web interface on specified port\n/debug\t\tShow debug information in OSD\n/nominidump\tDisable minidump creation\n/slave \"hWnd\"\tUse MPC-HC as slave\n/reset\t\tRestore default settings\n/help /h /?\tMegmutatja a parancssori kapcsolókról szóló súgót\n"
+msgid "Usage: mpc-hc.exe \"pathname\" [switches]\n\n\"pathname\"\tThe main file or directory to be loaded (wildcards\n\t\tallowed, \"-\" denotes standard input)\n/dub \"dubname\"\tLoad an additional audio file\n/dubdelay \"file\"\tLoad an additional audio file shifted with XXms (if\n\t\tthe file contains \"...DELAY XXms...\")\n/d3dfs\t\tStart rendering in D3D fullscreen mode\n/sub \"subname\"\tLoad an additional subtitle file\n/filter \"filtername\"\tLoad DirectShow filters from a dynamic link\n\t\tlibrary (wildcards allowed)\n/dvd\t\tRun in dvd mode, \"pathname\" means the dvd\n\t\tfolder (optional)\n/dvdpos T#C\tStart playback at title T, chapter C\n/dvdpos T#hh:mm\tStart playback at title T, position hh:mm:ss\n/cd\t\tLoad all the tracks of an audio cd or (s)vcd,\n\t\t\"pathname\" means the drive path (optional)\n/device\t\tOpen the default video device\n/open\t\tOpen the file, don't automatically start playback\n/play\t\tStart playing the file as soon the player is\n\t\tlaunched\n/close\t\tClose the player after playback (only works when\n\t\tused with /play)\n/shutdown\tShutdown the operating system after playback\n/standby\t\tPut the operating system in standby mode after playback\n/hibernate\tHibernate operating system after playback\n/logoff\t\tLog off after playback\n/lock\t\tLock workstation after playback\n/monitoroff\tTurn off the monitor after playback\n/playnext\t\tOpen next file in the folder after playback\n/fullscreen\tStart in full-screen mode\n/minimized\tStart in minimized mode\n/new\t\tUse a new instance of the player\n/add\t\tAdd \"pathname\" to playlist, can be combined\n\t\twith /open and /play\n/randomize\tRandomize the playlist\n/regvid\t\tCreate file associations for video files\n/regaud\t\tCreate file associations for audio files\n/regpl\t\tCreate file associations for playlist files\n/regall\t\tCreate file associations for all supported file types\n/unregall\t\tRemove all file associations\n/start ms\t\tStart playing at \"ms\" (= milliseconds)\n/startpos hh:mm:ss\tStart playing at position hh:mm:ss\n/fixedsize w,h\tSet a fixed window size\n/monitor N\tStart player on monitor N, where N starts from 1\n/audiorenderer N\tStart using audiorenderer N, where N starts from 1\n\t\t(see \"Output\" settings)\n/shaderpreset \"Pr\"\tStart using \"Pr\" shader preset\n/pns \"name\"\tSpecify Pan&Scan preset name to use\n/iconsassoc\tReassociate format icons\n/nofocus\t\tOpen MPC-HC in background\n/webport N\tStart web interface on specified port\n/debug\t\tShow debug information in OSD\n/nocrashreporter\tDisable the crash reporter\n/slave \"hWnd\"\tUse MPC-HC as slave\n/reset\t\tRestore default settings\n/help /h /?\tShow help about command line switches\n"
+msgstr "Használat: mpc-hc.exe \"pathname\" [kapcsolók]\n\n\"pathname\"\tA fő betöltendő fájl vagy mappa helye (spec. helyettesítő karakterek \n\t\tengedélyezve, \"-\" denotes standard input)\n/dub \"dubname\"\tBetölt egy külön audió fájlt\n/dubdelay \"file\"\tBetölt egy külön audió fájlt XX ms-al eltolva (ha a\n\t\tfájl tartalmaz \"...DELAY XXms...\")\n/d3dfs\t\tlejátszó indítása D3D teljes képernyős módban\n/sub \"subname\"\tBetölt egy külön felirat fájlt\n/filter \"filtername\"\tDirectShow szűrőket tölt be egy dynamic link\n\t\tlibrary-ból (spec. helyettesítő karakterek tengedélyezve)\n/dvd\t\tDVD módban való futtatás, a \"pathname\" a dvd \n\t\tmappáját jelenti (opcionális)\n/dvdpos T#C\tStart playback at title T, chapter C\n/dvdpos T#hh:mm\tStart playback at title T, position hh:mm:ss\n/cd\t\tBetölti egy audió CD vagy egy (s)vcd összes műsorszámát, a\n\t\t\"pathname\" a meghajtó betűjelét jelenti (opcionális)\n/device\t\tOpen the default video device\n/open\t\tMegnyitja a fájlt, de nem kezdi el automatikusan eljátszani\n/play\t\tKezdje el lejátszani a fájlt, amint a lejátszó\n\t\telindul\n/close\t\tZárja be a lejátszót a műsör befejeződése után (csak a /play kapcsolóval\n\t\tegyütt használható)\n/shutdown\tÁllítsa le a rendszert a műsor lejátszásának befejeződése után\n/standby\t\tPut the operating system in standby mode after playback\n/hibernate\tHibernate operating system after playback\n/logoff\t\tLog off after playback\n/lock\t\tLock workstation after playback\n/monitoroff\tTurn off the monitor after playback\n/playnext\t\tOpen next file in the folder after playback\n/fullscreen\tIndítás teljes képernyős módban\n/minimized\tMinimalizált formában való indítás\n/new\t\tA lejátszó egy új példányának használata\n/add\t\tA \"pathname\" hozzáadása a lejátszási listához, összekombinálható \n\t\taz /open és /play kapcsolóval\n/randomize\tRandomize the playlist\n/regvid\t\tVideó formátumok beregisztrálása\n/regaud\t\tAudió formátumok beregisztrálása\n/regpl\t\tCreate file associations for playlist files\n/regall\t\tCreate file associations for all supported file types\n/unregall\t\tVideó formátumok beregisztráltságának megszüntetése\n/start ms\t\tX \"ms\" (= ezredmásodperc) után induljon a lejátszás\n/startpos hh:mm:ss\tStart playing at position hh:mm:ss\n/fixedsize w,h\tFix ablakméret beállítása\n/monitor N\tIndítás az N. monitoron, ahol N egytől indul\n/audiorenderer N\tN. audió átalakító használata, ahol N egytől indul\n\t\t(lásd \"Kimenet\" beállítások)\n/shaderpreset \"Pr\"\tStart using \"Pr\" shader preset\n/pns \"name\"\tSpecify Pan&Scan preset name to use\n/iconsassoc\tReassociate format icons\n/nofocus\t\tOpen MPC-HC in background\n/webport N\tStart web interface on specified port\n/debug\t\tShow debug information in OSD\n/nocrashreporter\tDisable the crash reporter\n/slave \"hWnd\"\tUse MPC-HC as slave\n/reset\t\tRestore default settings\n/help /h /?\tMegmutatja a parancssori kapcsolókról szóló súgót\n"
 
 msgctxt "IDS_UNKNOWN_SWITCH"
 msgid "Unrecognized switch(es) found in command line string: \n\n"
@@ -2646,7 +2679,7 @@ msgstr "Jobb első"
 
 msgctxt "IDS_FRONT_CENTER"
 msgid "Front Center"
-msgstr ""
+msgstr "Front Közép"
 
 msgctxt "IDS_LOW_FREQUENCY"
 msgid "Low Frequency"
@@ -2682,7 +2715,7 @@ msgstr "Jobb Oldalsó"
 
 msgctxt "IDS_TOP_CENTER"
 msgid "Top Center"
-msgstr ""
+msgstr "Top Közép"
 
 msgctxt "IDS_TOP_FRONT_LEFT"
 msgid "Top Front Left"
@@ -2690,7 +2723,7 @@ msgstr "Top Front "
 
 msgctxt "IDS_TOP_FRONT_CENTER"
 msgid "Top Front Center"
-msgstr ""
+msgstr "Top Front Közép"
 
 msgctxt "IDS_TOP_FRONT_RIGHT"
 msgid "Top Front Right"
@@ -2707,34 +2740,6 @@ msgstr "Top Hátsó Center"
 msgctxt "IDS_TOP_BACK_RIGHT"
 msgid "Top Back Right"
 msgstr "Top Hátsó Jobb"
-
-msgctxt "IDS_AG_RESET_STATS"
-msgid "Reset Display Stats"
-msgstr "Képernyő-statisztika alaphelyzetbe állítása"
-
-msgctxt "IDD_PPAGESUBMISC"
-msgid "Subtitles::Misc"
-msgstr "Feliratok::Egyéb"
-
-msgctxt "IDS_VIEW_BORDERLESS"
-msgid "Hide &borders"
-msgstr "Ablakszegély elrejtése"
-
-msgctxt "IDS_VIEW_FRAMEONLY"
-msgid "Frame Only"
-msgstr "Csak a keret megjelenítése"
-
-msgctxt "IDS_VIEW_CAPTIONMENU"
-msgid "Sho&w Caption&&Menu"
-msgstr "Címsor és Menüsor megjelenítése"
-
-msgctxt "IDS_VIEW_HIDEMENU"
-msgid "Hide &Menu"
-msgstr "Menüsor elrejtése"
-
-msgctxt "IDD_PPAGEADVANCED"
-msgid "Advanced"
-msgstr "Haladó"
 
 msgctxt "IDS_TIME_TOOLTIP_ABOVE"
 msgid "Above seek bar"
@@ -2762,7 +2767,7 @@ msgstr "Mégse"
 
 msgctxt "IDS_THUMB_THUMBNAILS"
 msgid "Layout"
-msgstr ""
+msgstr "Elrendezés"
 
 msgctxt "IDS_THUMB_PIXELS"
 msgid "Pixels:"
@@ -2906,11 +2911,11 @@ msgstr "Shockwave Flash"
 
 msgctxt "IDS_MFMT_OTHER_AUDIO"
 msgid "Other Audio"
-msgstr ""
+msgstr "Egyéb Audio"
 
 msgctxt "IDS_MFMT_AC3"
 msgid "AC-3"
-msgstr ""
+msgstr "AC-3"
 
 msgctxt "IDS_MFMT_AIFF"
 msgid "AIFF"
@@ -2938,7 +2943,7 @@ msgstr "Opus Audio Codec"
 
 msgctxt "IDS_MFMT_DTS"
 msgid "DTS/DTS-HD"
-msgstr ""
+msgstr "DTS/DTS-HD"
 
 msgctxt "IDS_MFMT_AMR"
 msgid "AMR"

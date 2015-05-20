@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MPC-HC\n"
-"POT-Creation-Date: 2015-03-16 18:09:30+0000\n"
-"PO-Revision-Date: 2015-03-23 08:01+0000\n"
+"POT-Creation-Date: 2015-05-17 20:47:27+0000\n"
+"PO-Revision-Date: 2015-05-18 07:01+0000\n"
 "Last-Translator: arestarh1986 <arestarh@ukr.net>\n"
 "Language-Team: Ukrainian (http://www.transifex.com/projects/p/mpc-hc/language/uk/)\n"
 "MIME-Version: 1.0\n"
@@ -109,15 +109,15 @@ msgid "Enable custom channel mapping"
 msgstr "Увімкнути розподіл каналів користувача"
 
 msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_STATIC1"
-msgid "Speaker configuration for "
-msgstr "Налаштування колонок для "
+msgid "Speaker configuration for"
+msgstr "Налаштування колонок для"
 
 msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_STATIC2"
 msgid "input channels:"
 msgstr "вхідних каналів:"
 
 msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_STATIC3"
-msgid "Hold shift for immediate changes when clicking something "
+msgid "Hold shift for immediate changes when clicking something"
 msgstr "Утримуйте shift для негайного використання змін при натискуванні"
 
 msgctxt "IDD_GOTO_DLG_CAPTION"
@@ -1661,6 +1661,30 @@ msgid "Command line help"
 msgstr "Параметри запуску"
 
 msgctxt "IDD_CMD_LINE_HELP_IDOK"
+msgid "OK"
+msgstr "ОК"
+
+msgctxt "IDD_CRASH_REPORTER_CAPTION"
+msgid "Crash reporter"
+msgstr "Повідомити про падіння"
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC1"
+msgid "We are sorry, it seems MPC-HC just crashed. :(\n\nTo help us diagnose and fix the problem, a bug report will be sent. You can provide additional information if you want."
+msgstr ""
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC2"
+msgid "Email:"
+msgstr "Email:"
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC3"
+msgid "Your email address is optional and will only be used if the developers need to contact you for more information."
+msgstr "Вказання вашої email-адреси є опціональним і розробники вам напишуть лише тоді, коли необхідна додаткова інформація."
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC4"
+msgid "Problem description (use English only):"
+msgstr "Описання проблеми (лише англійською):"
+
+msgctxt "IDD_CRASH_REPORTER_IDOK"
 msgid "OK"
 msgstr "ОК"
 

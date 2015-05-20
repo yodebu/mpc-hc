@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MPC-HC\n"
 "POT-Creation-Date: 2015-03-16 18:09:30+0000\n"
-"PO-Revision-Date: 2015-04-12 02:15+0000\n"
+"PO-Revision-Date: 2015-05-15 18:12+0000\n"
 "Last-Translator: Underground78\n"
 "Language-Team: Greek (http://www.transifex.com/projects/p/mpc-hc/language/el/)\n"
 "MIME-Version: 1.0\n"
@@ -110,15 +110,15 @@ msgid "Enable custom channel mapping"
 msgstr "Ενεργοποίηση προσαρμοσμένης αντιστοίχισης καναλιών"
 
 msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_STATIC1"
-msgid "Speaker configuration for "
-msgstr "Διαμόρφωση ηχείων για "
+msgid "Speaker configuration for"
+msgstr "Διαμόρφωση ηχείων για"
 
 msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_STATIC2"
 msgid "input channels:"
 msgstr "κανάλια εισόδου:"
 
 msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_STATIC3"
-msgid "Hold shift for immediate changes when clicking something "
+msgid "Hold shift for immediate changes when clicking something"
 msgstr "Κρατήστε πατημένο το πλήκτρο shift για άμεσες αλλαγές όταν κάνετε κλικ σε κάτι"
 
 msgctxt "IDD_GOTO_DLG_CAPTION"
@@ -1664,4 +1664,28 @@ msgstr "Βοήθεια γραμμής εντολών"
 msgctxt "IDD_CMD_LINE_HELP_IDOK"
 msgid "OK"
 msgstr "Εντάξει"
+
+msgctxt "IDD_CRASH_REPORTER_CAPTION"
+msgid "Crash reporter"
+msgstr ""
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC1"
+msgid "We are sorry, it seems MPC-HC just crashed. :(\n\nTo help us diagnose and fix the problem, a bug report will be sent. You can provide additional information if you want."
+msgstr ""
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC2"
+msgid "Email:"
+msgstr ""
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC3"
+msgid "Your email address is optional and will only be used if the developers need to contact you for more information."
+msgstr ""
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC4"
+msgid "Problem description (use English only):"
+msgstr ""
+
+msgctxt "IDD_CRASH_REPORTER_IDOK"
+msgid "OK"
+msgstr ""
 

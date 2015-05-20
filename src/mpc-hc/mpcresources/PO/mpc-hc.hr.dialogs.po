@@ -1,8 +1,8 @@
 # MPC-HC - Strings extracted from dialogs
-# Copyright (C) 2002 - 2015 see Authors.txt
+# Copyright (C) 2002 - 2013 see Authors.txt
 # This file is distributed under the same license as the MPC-HC package.
 # Translators:
-# schop <aprcel00@fesb.hr>, 2014
+# schop <aprcel00@fesb.hr>, 2014-2015
 # iivana24 <iivana24@gmail.com>, 2014
 # streger <stjepan.treger@gmail.com>, 2014
 # Ico2005 <vukasinac@gmail.com>, 2014
@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MPC-HC\n"
-"POT-Creation-Date: 2014-09-19 20:08:04+0000\n"
-"PO-Revision-Date: 2014-12-12 12:21+0000\n"
+"POT-Creation-Date: 2015-03-16 18:09:30+0000\n"
+"PO-Revision-Date: 2015-05-15 18:12+0000\n"
 "Last-Translator: Underground78\n"
 "Language-Team: Croatian (http://www.transifex.com/projects/p/mpc-hc/language/hr/)\n"
 "MIME-Version: 1.0\n"
@@ -113,7 +113,7 @@ msgid "Enable custom channel mapping"
 msgstr "Omogući prilagođeno mapiranje kanala"
 
 msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_STATIC1"
-msgid "Speaker configuration for "
+msgid "Speaker configuration for"
 msgstr "Konfiguracija zvučnika za"
 
 msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_STATIC2"
@@ -121,7 +121,7 @@ msgid "input channels:"
 msgstr "ulazni kanali:"
 
 msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_STATIC3"
-msgid "Hold shift for immediate changes when clicking something "
+msgid "Hold shift for immediate changes when clicking something"
 msgstr "Držite pritisnutu tipku SHIFT za instantne promjene kada kliknete nešto"
 
 msgctxt "IDD_GOTO_DLG_CAPTION"
@@ -1282,7 +1282,7 @@ msgstr "Omogući automatsku provjeru nadogradnje"
 
 msgctxt "IDD_PPAGEMISC_IDC_STATIC5"
 msgid "Check every:"
-msgstr ""
+msgstr "Provjeri svakih:"
 
 msgctxt "IDD_PPAGEMISC_IDC_STATIC6"
 msgid "day(s)"
@@ -1667,4 +1667,28 @@ msgstr "Pomoć za naredbe komandne linije"
 msgctxt "IDD_CMD_LINE_HELP_IDOK"
 msgid "OK"
 msgstr "U redu"
+
+msgctxt "IDD_CRASH_REPORTER_CAPTION"
+msgid "Crash reporter"
+msgstr ""
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC1"
+msgid "We are sorry, it seems MPC-HC just crashed. :(\n\nTo help us diagnose and fix the problem, a bug report will be sent. You can provide additional information if you want."
+msgstr ""
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC2"
+msgid "Email:"
+msgstr ""
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC3"
+msgid "Your email address is optional and will only be used if the developers need to contact you for more information."
+msgstr ""
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC4"
+msgid "Problem description (use English only):"
+msgstr ""
+
+msgctxt "IDD_CRASH_REPORTER_IDOK"
+msgid "OK"
+msgstr ""
 

@@ -1661,13 +1661,45 @@ msgctxt "IDS_MPLAYERC_103"
 msgid "Shift Subtitle Right"
 msgstr "Phụ đề phải"
 
-msgctxt "IDS_AG_DISPLAY_STATS"
-msgid "Display Stats"
-msgstr "Hiển thị thống kê số liệu"
-
 msgctxt "IDS_AG_SEEKSET"
 msgid "Jump to Beginning"
 msgstr "Nhảy đến bắt đầu"
+
+msgctxt "IDS_OSD_SHOW_FILENAME"
+msgid "OSD: Show File Name"
+msgstr ""
+
+msgctxt "IDS_OSD_DISPLAY_RENDERER_STATS"
+msgid "OSD: Display Renderer Statistics"
+msgstr ""
+
+msgctxt "IDS_OSD_RESET_RENDERER_STATS"
+msgid "OSD: Reset Renderer Statistics"
+msgstr ""
+
+msgctxt "IDD_PPAGESUBMISC"
+msgid "Subtitles::Misc"
+msgstr "Phụ đề::Linh tinh"
+
+msgctxt "IDS_VIEW_BORDERLESS"
+msgid "Hide &borders"
+msgstr "Ẩn &viền"
+
+msgctxt "IDS_VIEW_FRAMEONLY"
+msgid "Fra&me Only"
+msgstr "Chỉ khung"
+
+msgctxt "IDS_VIEW_CAPTIONMENU"
+msgid "Sho&w Caption&&Menu"
+msgstr "H&iện Nhãn&&Menu"
+
+msgctxt "IDS_VIEW_HIDEMENU"
+msgid "Hide &Menu"
+msgstr "Ẩn &menu"
+
+msgctxt "IDD_PPAGEADVANCED"
+msgid "Advanced"
+msgstr "Nâng cao"
 
 msgctxt "IDS_AG_VIEW_MINIMAL"
 msgid "View Minimal"
@@ -1985,9 +2017,9 @@ msgctxt "IDS_MPLAYERC_97"
 msgid "On/Off Subtitle (DVD)"
 msgstr "Bật/Tắt phụ đề (DVD)"
 
-msgctxt "IDS_MPLAYERC_98"
-msgid "Remaining Time"
-msgstr "Thời gian còn lại"
+msgctxt "IDS_OSD_DISPLAY_CURRENT_TIME"
+msgid "OSD: Display Current Time"
+msgstr ""
 
 msgctxt "IDS_PPAGEWEBSERVER_0"
 msgid "Select the directory"
@@ -2526,8 +2558,8 @@ msgid "Volume boost Max"
 msgstr "Khối lượng âm lớn nhất"
 
 msgctxt "IDS_USAGE"
-msgid "Usage: mpc-hc.exe \"pathname\" [switches]\n\n\"pathname\"\tThe main file or directory to be loaded (wildcards\n\t\tallowed, \"-\" denotes standard input)\n/dub \"dubname\"\tLoad an additional audio file\n/dubdelay \"file\"\tLoad an additional audio file shifted with XXms (if\n\t\tthe file contains \"...DELAY XXms...\")\n/d3dfs\t\tStart rendering in D3D fullscreen mode\n/sub \"subname\"\tLoad an additional subtitle file\n/filter \"filtername\"\tLoad DirectShow filters from a dynamic link\n\t\tlibrary (wildcards allowed)\n/dvd\t\tRun in dvd mode, \"pathname\" means the dvd\n\t\tfolder (optional)\n/dvdpos T#C\tStart playback at title T, chapter C\n/dvdpos T#hh:mm\tStart playback at title T, position hh:mm:ss\n/cd\t\tLoad all the tracks of an audio cd or (s)vcd,\n\t\t\"pathname\" means the drive path (optional)\n/device\t\tOpen the default video device\n/open\t\tOpen the file, don't automatically start playback\n/play\t\tStart playing the file as soon the player is\n\t\tlaunched\n/close\t\tClose the player after playback (only works when\n\t\tused with /play)\n/shutdown\tShutdown the operating system after playback\n/standby\t\tPut the operating system in standby mode after playback\n/hibernate\tHibernate operating system after playback\n/logoff\t\tLog off after playback\n/lock\t\tLock workstation after playback\n/monitoroff\tTurn off the monitor after playback\n/playnext\t\tOpen next file in the folder after playback\n/fullscreen\tStart in full-screen mode\n/minimized\tStart in minimized mode\n/new\t\tUse a new instance of the player\n/add\t\tAdd \"pathname\" to playlist, can be combined\n\t\twith /open and /play\n/randomize\tRandomize the playlist\n/regvid\t\tCreate file associations for video files\n/regaud\t\tCreate file associations for audio files\n/regpl\t\tCreate file associations for playlist files\n/regall\t\tCreate file associations for all supported file types\n/unregall\t\tRemove all file associations\n/start ms\t\tStart playing at \"ms\" (= milliseconds)\n/startpos hh:mm:ss\tStart playing at position hh:mm:ss\n/fixedsize w,h\tSet a fixed window size\n/monitor N\tStart player on monitor N, where N starts from 1\n/audiorenderer N\tStart using audiorenderer N, where N starts from 1\n\t\t(see \"Output\" settings)\n/shaderpreset \"Pr\"\tStart using \"Pr\" shader preset\n/pns \"name\"\tSpecify Pan&Scan preset name to use\n/iconsassoc\tReassociate format icons\n/nofocus\t\tOpen MPC-HC in background\n/webport N\tStart web interface on specified port\n/debug\t\tShow debug information in OSD\n/nominidump\tDisable minidump creation\n/slave \"hWnd\"\tUse MPC-HC as slave\n/reset\t\tRestore default settings\n/help /h /?\tShow help about command line switches\n"
-msgstr "Cách sử dụng: mpc-hc.exe \"pathname\" [chuyển]\n\n\"pathname\"\tCác tập tin hoặc thư mục chính được nạp (ký tự đại diện\n\t\tcho phép, \"-\" biểu thị đầu vào tiêu chuẩn)\n/dub \"dubname\"\tNạp một tập tin âm thanh khác\n/dubdelay \"file\"\tNạp một tập tin âm thanh thêm dịch chuyển XXms (nếu\n\t\ttệp chứa \"...Độ trễ XX giây...\")\n/d3dfs\t\tBắt đầu dựng hình trong chế độ toàn màn hình D3D\n/sub \"subname\"\tNạp một file phụ đề thêm\n/filter \"filtername\"\tBộ lọc DirectShow tải từ một liên thư viện\n\t\tkết động(ký tự đại diện)\n/dvd\t\tChạy chế độ dvd, \"pathname\" nghĩa là thư mục\n\t\tDVD(tùy chọn)\n/dvdpos T#C\tBắt đầu phát lại tại tiêu đề T, chương C\n/dvdpos T#hh:mm\tPhát lại tại tiêu đề T, vị trí gg:pp:gg\n/cd\t\tTải tất cả các bài hát của một đĩa CD âm thanh hoặc (s) VCD,\n\t\t\"pathname\" nghĩa là đường dẫn cd(tùy chọn)\n/device\t\tMở thiết bị video mặc định\n/open\t\tMở tập tin, không tự động bắt đầu phát lại\n/play\t\tBắt đầu chơi các tập tin ngay sau trình phát nhạc\n\t\tđã chạy\n/close\t\tĐóng trình phát nhạc sau khi phát lại (chỉ hoạt động khi\n\t\tdùng với /phát)\n/shutdown\tTắt máy tính, hệ điều hành sau khi phát lại\n/standby\t\tPut the operating system in standby mode after playback\n/hibernate\tHibernate operating system after playback\n/logoff\t\tLog off after playback\n/lock\t\tLock workstation after playback\n/monitoroff\tTurn off the monitor after playback\n/playnext\t\tOpen next file in the folder after playback\n/fullscreen\tBắt đầu trong chế độ toàn màn hình\n/minimized\tBắt đầu trong chế độ giảm thiểu\n/new\t\tSử dụng một trường hợp mới của trình phát nhạc\n/add\t\tThêm\"pathname\" vào danh sách phát, sẽ kết hợp\n\t\tvới/mở và/phát\n/randomize\tRandomize the playlist\n/regvid\t\tTạo ra các phần mở rộng cho các tập tin video\n/regaud\t\tTạo ra các phần mở rộng cho các tập tin âm thanh\n/regpl\t\tTạo ra các phần mở rộng cho các tập tin danh sách phát\n/regall\t\tTạo ra các phần mở rộng cho các tất cả các tập tin \n/unregall\t\tLoại bỏ phần mở rộng\n/start ms\t\tBắt đầu phát lúc \"mlg\" (= mili giây)\n/startpos hh:mm:ss\tPhát tại vị trí gg:pp:gg\n/fixedsize w,h\tThiết lập một kích thước cửa sổ cố định\n/monitor N\tBắt đầu chơi trên màn hình N, trong đó N bắt đầu từ 1\n/audiorenderer N\tBắt đầu sử dụng trình âm N, trong đó N bắt đầu từ 1\n\t\t(xem thiết lập\"Ngõ ra\")\n/shaderpreset \"Pr\"\tBắt đầu sử dụng \"Pr\" tạo bóng đặt trước\n/pns \"name\"\tSpecify Pan&Scan preset name to use\n/iconsassoc\tReassociate format icons\n/nofocus\t\tOpen MPC-HC in background\n/webport N\tStart web interface on specified port\n/debug\t\tShow debug information in OSD\n/nominidump\tDisable minidump creation\n/slave \"hWnd\"\tUse MPC-HC as slave\n/reset\t\tKhôi phục cài đặt mặc định\n/help /h /?\tHiện giúp đỡ về chuyển dòng lệnh\n"
+msgid "Usage: mpc-hc.exe \"pathname\" [switches]\n\n\"pathname\"\tThe main file or directory to be loaded (wildcards\n\t\tallowed, \"-\" denotes standard input)\n/dub \"dubname\"\tLoad an additional audio file\n/dubdelay \"file\"\tLoad an additional audio file shifted with XXms (if\n\t\tthe file contains \"...DELAY XXms...\")\n/d3dfs\t\tStart rendering in D3D fullscreen mode\n/sub \"subname\"\tLoad an additional subtitle file\n/filter \"filtername\"\tLoad DirectShow filters from a dynamic link\n\t\tlibrary (wildcards allowed)\n/dvd\t\tRun in dvd mode, \"pathname\" means the dvd\n\t\tfolder (optional)\n/dvdpos T#C\tStart playback at title T, chapter C\n/dvdpos T#hh:mm\tStart playback at title T, position hh:mm:ss\n/cd\t\tLoad all the tracks of an audio cd or (s)vcd,\n\t\t\"pathname\" means the drive path (optional)\n/device\t\tOpen the default video device\n/open\t\tOpen the file, don't automatically start playback\n/play\t\tStart playing the file as soon the player is\n\t\tlaunched\n/close\t\tClose the player after playback (only works when\n\t\tused with /play)\n/shutdown\tShutdown the operating system after playback\n/standby\t\tPut the operating system in standby mode after playback\n/hibernate\tHibernate operating system after playback\n/logoff\t\tLog off after playback\n/lock\t\tLock workstation after playback\n/monitoroff\tTurn off the monitor after playback\n/playnext\t\tOpen next file in the folder after playback\n/fullscreen\tStart in full-screen mode\n/minimized\tStart in minimized mode\n/new\t\tUse a new instance of the player\n/add\t\tAdd \"pathname\" to playlist, can be combined\n\t\twith /open and /play\n/randomize\tRandomize the playlist\n/regvid\t\tCreate file associations for video files\n/regaud\t\tCreate file associations for audio files\n/regpl\t\tCreate file associations for playlist files\n/regall\t\tCreate file associations for all supported file types\n/unregall\t\tRemove all file associations\n/start ms\t\tStart playing at \"ms\" (= milliseconds)\n/startpos hh:mm:ss\tStart playing at position hh:mm:ss\n/fixedsize w,h\tSet a fixed window size\n/monitor N\tStart player on monitor N, where N starts from 1\n/audiorenderer N\tStart using audiorenderer N, where N starts from 1\n\t\t(see \"Output\" settings)\n/shaderpreset \"Pr\"\tStart using \"Pr\" shader preset\n/pns \"name\"\tSpecify Pan&Scan preset name to use\n/iconsassoc\tReassociate format icons\n/nofocus\t\tOpen MPC-HC in background\n/webport N\tStart web interface on specified port\n/debug\t\tShow debug information in OSD\n/nocrashreporter\tDisable the crash reporter\n/slave \"hWnd\"\tUse MPC-HC as slave\n/reset\t\tRestore default settings\n/help /h /?\tShow help about command line switches\n"
+msgstr "Cách sử dụng: mpc-hc.exe \"pathname\" [chuyển]\n\n\"pathname\"\tCác tập tin hoặc thư mục chính được nạp (ký tự đại diện\n\t\tcho phép, \"-\" biểu thị đầu vào tiêu chuẩn)\n/dub \"dubname\"\tNạp một tập tin âm thanh khác\n/dubdelay \"file\"\tNạp một tập tin âm thanh thêm dịch chuyển XXms (nếu\n\t\ttệp chứa \"...Độ trễ XX giây...\")\n/d3dfs\t\tBắt đầu dựng hình trong chế độ toàn màn hình D3D\n/sub \"subname\"\tNạp một file phụ đề thêm\n/filter \"filtername\"\tBộ lọc DirectShow tải từ một liên thư viện\n\t\tkết động(ký tự đại diện)\n/dvd\t\tChạy chế độ dvd, \"pathname\" nghĩa là thư mục\n\t\tDVD(tùy chọn)\n/dvdpos T#C\tBắt đầu phát lại tại tiêu đề T, chương C\n/dvdpos T#hh:mm\tPhát lại tại tiêu đề T, vị trí gg:pp:gg\n/cd\t\tTải tất cả các bài hát của một đĩa CD âm thanh hoặc (s) VCD,\n\t\t\"pathname\" nghĩa là đường dẫn cd(tùy chọn)\n/device\t\tMở thiết bị video mặc định\n/open\t\tMở tập tin, không tự động bắt đầu phát lại\n/play\t\tBắt đầu chơi các tập tin ngay sau trình phát nhạc\n\t\tđã chạy\n/close\t\tĐóng trình phát nhạc sau khi phát lại (chỉ hoạt động khi\n\t\tdùng với /phát)\n/shutdown\tTắt máy tính, hệ điều hành sau khi phát lại\n/standby\t\tPut the operating system in standby mode after playback\n/hibernate\tHibernate operating system after playback\n/logoff\t\tLog off after playback\n/lock\t\tLock workstation after playback\n/monitoroff\tTurn off the monitor after playback\n/playnext\t\tOpen next file in the folder after playback\n/fullscreen\tBắt đầu trong chế độ toàn màn hình\n/minimized\tBắt đầu trong chế độ giảm thiểu\n/new\t\tSử dụng một trường hợp mới của trình phát nhạc\n/add\t\tThêm\"pathname\" vào danh sách phát, sẽ kết hợp\n\t\tvới/mở và/phát\n/randomize\tRandomize the playlist\n/regvid\t\tTạo ra các phần mở rộng cho các tập tin video\n/regaud\t\tTạo ra các phần mở rộng cho các tập tin âm thanh\n/regpl\t\tTạo ra các phần mở rộng cho các tập tin danh sách phát\n/regall\t\tTạo ra các phần mở rộng cho các tất cả các tập tin \n/unregall\t\tLoại bỏ phần mở rộng\n/start ms\t\tBắt đầu phát lúc \"mlg\" (= mili giây)\n/startpos hh:mm:ss\tPhát tại vị trí gg:pp:gg\n/fixedsize w,h\tThiết lập một kích thước cửa sổ cố định\n/monitor N\tBắt đầu chơi trên màn hình N, trong đó N bắt đầu từ 1\n/audiorenderer N\tBắt đầu sử dụng trình âm N, trong đó N bắt đầu từ 1\n\t\t(xem thiết lập\"Ngõ ra\")\n/shaderpreset \"Pr\"\tBắt đầu sử dụng \"Pr\" tạo bóng đặt trước\n/pns \"name\"\tSpecify Pan&Scan preset name to use\n/iconsassoc\tReassociate format icons\n/nofocus\t\tOpen MPC-HC in background\n/webport N\tStart web interface on specified port\n/debug\t\tShow debug information in OSD\n/nocrashreporter\tDisable the crash reporter\n/slave \"hWnd\"\tUse MPC-HC as slave\n/reset\t\tKhôi phục cài đặt mặc định\n/help /h /?\tHiện giúp đỡ về chuyển dòng lệnh\n"
 
 msgctxt "IDS_UNKNOWN_SWITCH"
 msgid "Unrecognized switch(es) found in command line string: \n\n"
@@ -2708,34 +2740,6 @@ msgstr "Đỉnh trước trung tâm"
 msgctxt "IDS_TOP_BACK_RIGHT"
 msgid "Top Back Right"
 msgstr "Đỉnh trước phải"
-
-msgctxt "IDS_AG_RESET_STATS"
-msgid "Reset Display Stats"
-msgstr "Thiết lập lại hiển thị thống kê số liệu"
-
-msgctxt "IDD_PPAGESUBMISC"
-msgid "Subtitles::Misc"
-msgstr "Phụ đề::Linh tinh"
-
-msgctxt "IDS_VIEW_BORDERLESS"
-msgid "Hide &borders"
-msgstr "Ẩn &viền"
-
-msgctxt "IDS_VIEW_FRAMEONLY"
-msgid "Frame Only"
-msgstr "Chỉ khung"
-
-msgctxt "IDS_VIEW_CAPTIONMENU"
-msgid "Sho&w Caption&&Menu"
-msgstr "H&iện Nhãn&&Menu"
-
-msgctxt "IDS_VIEW_HIDEMENU"
-msgid "Hide &Menu"
-msgstr "Ẩn &menu"
-
-msgctxt "IDD_PPAGEADVANCED"
-msgid "Advanced"
-msgstr "Nâng cao"
 
 msgctxt "IDS_TIME_TOOLTIP_ABOVE"
 msgid "Above seek bar"

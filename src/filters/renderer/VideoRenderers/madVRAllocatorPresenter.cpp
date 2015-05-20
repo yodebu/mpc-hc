@@ -23,7 +23,8 @@
 #include "../../../SubPic/DX9SubPic.h"
 #include "../../../SubPic/SubPicQueueImpl.h"
 #include "RenderersSettings.h"
-#include "moreuuids.h"
+#include <mvrInterfaces.h>
+
 
 using namespace DSObjects;
 
@@ -186,6 +187,8 @@ STDMETHODIMP_(void) CmadVRAllocatorPresenter::SetPosition(RECT w, RECT v)
     if (CComQIPtr<IVideoWindow> pVW = m_pDXR) {
         pVW->SetWindowPosition(w.left, w.top, w.right - w.left, w.bottom - w.top);
     }
+
+    SetVideoSize(GetVideoSize(), GetVideoSize(true));
 }
 
 STDMETHODIMP_(SIZE) CmadVRAllocatorPresenter::GetVideoSize(bool bCorrectAR) const

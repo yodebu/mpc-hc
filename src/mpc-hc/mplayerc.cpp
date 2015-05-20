@@ -46,7 +46,7 @@
 #include "mpc-hc_config.h"
 #include "../MathLibFix/MathLibFix.h"
 #include "CmdLineHelpDlg.h"
-#include "MiniDump.h"
+#include "CrashReporter.h"
 
 
 #define HOOKS_BUGS_URL _T("https://trac.mpc-hc.org/ticket/3739")
@@ -1453,7 +1453,7 @@ BOOL CMPlayerCApp::InitInstance()
     // Remove the working directory from the search path to work around the DLL preloading vulnerability
     SetDllDirectory(_T(""));
 
-    CMiniDump::Enable();
+    CrashReporter::Enable();
     WorkAroundMathLibraryBug();
 
     if (!HeapSetInformation(nullptr, HeapEnableTerminationOnCorruption, nullptr, 0)) {
@@ -2143,10 +2143,8 @@ void CRemoteCtrlClient::ExecuteCommand(CStringA cmd, int repcnt)
     POSITION pos = s.wmcmds.GetHeadPosition();
     while (pos) {
         wmcmd wc = s.wmcmds.GetNext(pos);
-        CStringA name = TToA(wc.GetName());
-        name.Replace(' ', '_');
         if ((repcnt == 0 && wc.rmrepcnt == 0 || wc.rmrepcnt > 0 && (repcnt % wc.rmrepcnt) == 0)
-                && (!name.CompareNoCase(cmd) || !wc.rmcmd.CompareNoCase(cmd) || wc.cmd == (WORD)strtol(cmd, nullptr, 10))) {
+                && (!wc.rmcmd.CompareNoCase(cmd) || wc.cmd == (WORD)strtol(cmd, nullptr, 10))) {
             CAutoLock cAutoLock(&m_csLock);
             TRACE(_T("CRemoteCtrlClient (calling command): %s\n"), wc.GetName());
             m_pWnd->SendMessage(WM_COMMAND, wc.cmd);

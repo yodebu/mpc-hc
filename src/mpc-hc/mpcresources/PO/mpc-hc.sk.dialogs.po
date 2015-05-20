@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MPC-HC\n"
-"POT-Creation-Date: 2015-03-16 18:09:30+0000\n"
-"PO-Revision-Date: 2015-04-12 09:57+0000\n"
+"POT-Creation-Date: 2015-05-17 20:47:27+0000\n"
+"PO-Revision-Date: 2015-05-18 10:52+0000\n"
 "Last-Translator: Marián Hikaník <podnety@mojepreklady.net>\n"
 "Language-Team: Slovak (http://www.transifex.com/projects/p/mpc-hc/language/sk/)\n"
 "MIME-Version: 1.0\n"
@@ -110,16 +110,16 @@ msgid "Enable custom channel mapping"
 msgstr "Zapnúť mapovanie kanálov používateľom"
 
 msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_STATIC1"
-msgid "Speaker configuration for "
-msgstr "Konfig. reproduktory na: "
+msgid "Speaker configuration for"
+msgstr "Konfig. reproduktory na"
 
 msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_STATIC2"
 msgid "input channels:"
 msgstr "vstupné kanály:"
 
 msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_STATIC3"
-msgid "Hold shift for immediate changes when clicking something "
-msgstr "Ak chcete zmeny uplatniť okamžite, pridržte klávesu Shift "
+msgid "Hold shift for immediate changes when clicking something"
+msgstr "Ak chcete zmeny uplatniť okamžite po kliknutí, pridržte klávesu Shift"
 
 msgctxt "IDD_GOTO_DLG_CAPTION"
 msgid "Go To..."
@@ -1662,6 +1662,30 @@ msgid "Command line help"
 msgstr "Pomocník pre príkazový riadok"
 
 msgctxt "IDD_CMD_LINE_HELP_IDOK"
+msgid "OK"
+msgstr "OK"
+
+msgctxt "IDD_CRASH_REPORTER_CAPTION"
+msgid "Crash reporter"
+msgstr "Oznamovač zlyhaní"
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC1"
+msgid "We are sorry, it seems MPC-HC just crashed. :(\n\nTo help us diagnose and fix the problem, a bug report will be sent. You can provide additional information if you want."
+msgstr "Ospravedlňujeme sa za nepríjemnosti, ale zdá sa, že program MPC-HC neočakávane zlyhal. :(\n\nAk nám chcete pomôcť objasniť a opraviť vzniknutý problém, môžete nám odoslať záznam o chybe. Môžete pridať aj doplnkové informácie podľa svojho želania."
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC2"
+msgid "Email:"
+msgstr "E-mail:"
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC3"
+msgid "Your email address is optional and will only be used if the developers need to contact you for more information."
+msgstr "Vaša e-mailová adresa nie je povinná a použije sa iba v prípade, že by vás vývojári chceli kontaktovať s cieľom získania podrobnejších informácií."
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC4"
+msgid "Problem description (use English only):"
+msgstr "Opis problému (len v angličtine):"
+
+msgctxt "IDD_CRASH_REPORTER_IDOK"
 msgid "OK"
 msgstr "OK"
 

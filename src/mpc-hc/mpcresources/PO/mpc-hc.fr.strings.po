@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MPC-HC\n"
-"POT-Creation-Date: 2015-04-09 21:29:25+0000\n"
-"PO-Revision-Date: 2015-04-12 02:17+0000\n"
+"POT-Creation-Date: 2015-05-15 16:53:42+0000\n"
+"PO-Revision-Date: 2015-05-17 23:27+0000\n"
 "Last-Translator: Underground78\n"
 "Language-Team: French (http://www.transifex.com/projects/p/mpc-hc/language/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -1378,11 +1378,11 @@ msgstr "Sauvegarder le journal des événements dans un fichier (redémarrage n�
 
 msgctxt "IDS_TIMER_REMAINING_TIME"
 msgid "Remaining time"
-msgstr ""
+msgstr "Temps restant"
 
 msgctxt "IDS_TIMER_HIGH_PRECISION"
 msgid "High precision"
-msgstr ""
+msgstr "Haute précision"
 
 msgctxt "IDS_AG_OPEN_DEVICE"
 msgid "Open Device"
@@ -1660,13 +1660,45 @@ msgctxt "IDS_MPLAYERC_103"
 msgid "Shift Subtitle Right"
 msgstr "Décalage à droite des sous-titres"
 
-msgctxt "IDS_AG_DISPLAY_STATS"
-msgid "Display Stats"
-msgstr "Statistiques d'affichage"
-
 msgctxt "IDS_AG_SEEKSET"
 msgid "Jump to Beginning"
 msgstr "Revenir au début"
+
+msgctxt "IDS_OSD_SHOW_FILENAME"
+msgid "OSD: Show File Name"
+msgstr "OSD : Afficher le nom de fichier"
+
+msgctxt "IDS_OSD_DISPLAY_RENDERER_STATS"
+msgid "OSD: Display Renderer Statistics"
+msgstr "OSD : Afficher les statistiques du moteur de rendu"
+
+msgctxt "IDS_OSD_RESET_RENDERER_STATS"
+msgid "OSD: Reset Renderer Statistics"
+msgstr "OSD : Réinitialiser les statistiques du moteur de rendu"
+
+msgctxt "IDD_PPAGESUBMISC"
+msgid "Subtitles::Misc"
+msgstr "Sous-titres::Divers"
+
+msgctxt "IDS_VIEW_BORDERLESS"
+msgid "Hide &borders"
+msgstr "Cacher les &bordures"
+
+msgctxt "IDS_VIEW_FRAMEONLY"
+msgid "Fra&me Only"
+msgstr "&Bordures uniquement"
+
+msgctxt "IDS_VIEW_CAPTIONMENU"
+msgid "Sho&w Caption&&Menu"
+msgstr "Afficher le &titre et le menu"
+
+msgctxt "IDS_VIEW_HIDEMENU"
+msgid "Hide &Menu"
+msgstr "Cacher le &menu"
+
+msgctxt "IDD_PPAGEADVANCED"
+msgid "Advanced"
+msgstr "Réglages expert"
 
 msgctxt "IDS_AG_VIEW_MINIMAL"
 msgid "View Minimal"
@@ -1984,9 +2016,9 @@ msgctxt "IDS_MPLAYERC_97"
 msgid "On/Off Subtitle (DVD)"
 msgstr "Activer/Désactiver les sous-titres (DVD)"
 
-msgctxt "IDS_MPLAYERC_98"
-msgid "Remaining Time"
-msgstr "Afficher le temps restant"
+msgctxt "IDS_OSD_DISPLAY_CURRENT_TIME"
+msgid "OSD: Display Current Time"
+msgstr "OSD : Afficher l'indicateur de temps"
 
 msgctxt "IDS_PPAGEWEBSERVER_0"
 msgid "Select the directory"
@@ -2298,7 +2330,7 @@ msgstr "Mémoire insuffisante"
 
 msgctxt "IDS_MAINFRM_77"
 msgid "Error: Adobe Flash Player for Internet Explorer is required"
-msgstr "Erreur : le lecteur Flash pour Internet Explorer est requis"
+msgstr "Erreur : Adobe Flash Player pour Internet Explorer est requis"
 
 msgctxt "IDS_MAINFRM_78"
 msgid "QuickTime not yet supported for X64 (apple library not available)"
@@ -2525,8 +2557,8 @@ msgid "Volume boost Max"
 msgstr "Amplification du volume maximale"
 
 msgctxt "IDS_USAGE"
-msgid "Usage: mpc-hc.exe \"pathname\" [switches]\n\n\"pathname\"\tThe main file or directory to be loaded (wildcards\n\t\tallowed, \"-\" denotes standard input)\n/dub \"dubname\"\tLoad an additional audio file\n/dubdelay \"file\"\tLoad an additional audio file shifted with XXms (if\n\t\tthe file contains \"...DELAY XXms...\")\n/d3dfs\t\tStart rendering in D3D fullscreen mode\n/sub \"subname\"\tLoad an additional subtitle file\n/filter \"filtername\"\tLoad DirectShow filters from a dynamic link\n\t\tlibrary (wildcards allowed)\n/dvd\t\tRun in dvd mode, \"pathname\" means the dvd\n\t\tfolder (optional)\n/dvdpos T#C\tStart playback at title T, chapter C\n/dvdpos T#hh:mm\tStart playback at title T, position hh:mm:ss\n/cd\t\tLoad all the tracks of an audio cd or (s)vcd,\n\t\t\"pathname\" means the drive path (optional)\n/device\t\tOpen the default video device\n/open\t\tOpen the file, don't automatically start playback\n/play\t\tStart playing the file as soon the player is\n\t\tlaunched\n/close\t\tClose the player after playback (only works when\n\t\tused with /play)\n/shutdown\tShutdown the operating system after playback\n/standby\t\tPut the operating system in standby mode after playback\n/hibernate\tHibernate operating system after playback\n/logoff\t\tLog off after playback\n/lock\t\tLock workstation after playback\n/monitoroff\tTurn off the monitor after playback\n/playnext\t\tOpen next file in the folder after playback\n/fullscreen\tStart in full-screen mode\n/minimized\tStart in minimized mode\n/new\t\tUse a new instance of the player\n/add\t\tAdd \"pathname\" to playlist, can be combined\n\t\twith /open and /play\n/randomize\tRandomize the playlist\n/regvid\t\tCreate file associations for video files\n/regaud\t\tCreate file associations for audio files\n/regpl\t\tCreate file associations for playlist files\n/regall\t\tCreate file associations for all supported file types\n/unregall\t\tRemove all file associations\n/start ms\t\tStart playing at \"ms\" (= milliseconds)\n/startpos hh:mm:ss\tStart playing at position hh:mm:ss\n/fixedsize w,h\tSet a fixed window size\n/monitor N\tStart player on monitor N, where N starts from 1\n/audiorenderer N\tStart using audiorenderer N, where N starts from 1\n\t\t(see \"Output\" settings)\n/shaderpreset \"Pr\"\tStart using \"Pr\" shader preset\n/pns \"name\"\tSpecify Pan&Scan preset name to use\n/iconsassoc\tReassociate format icons\n/nofocus\t\tOpen MPC-HC in background\n/webport N\tStart web interface on specified port\n/debug\t\tShow debug information in OSD\n/nominidump\tDisable minidump creation\n/slave \"hWnd\"\tUse MPC-HC as slave\n/reset\t\tRestore default settings\n/help /h /?\tShow help about command line switches\n"
-msgstr "Utilisation : mpc-hc.exe \"chemin du fichier\" [options]\n\n\"chemin du fichier\"\tFichier principal ou répertoire à charger (jokers\n\t\tautorisés, \"-\" désigne l'entrée standard)\n/dub \"fichier audio\"\tCharge un fichier audio supplémentaire\n/dubdelay \"fichier\"\tCharge un fichier audio avec décalage de XXms (si\n\t\tle nom contient \"...DELAY XXms...\")\n/d3dfs\t\tLance l'affichage en mode plein écran D3D (réduit le\n\t\t\"tearing\")\n/sub \"fichier ST\"\tCharge un fichier de sous-titres\n/filter \"nom\"\tCharge un filtre DirectShow à partir d'une DLL\n\t\t(jokers autorisés)\n/dvd\t\tDémarre en mode DVD (il est possible de fournir le\n\t\tnom du répertoire)\n/dvdpos T#C\tDémarre la lecture du titre T, à partir du chapitre C\n/dvdpos T#hh:mm\tDémarre la lecture du titre T, à partir de la position hh:mm:ss\n/cd\t\tCharge toutes les pistes d'un CD audio ou d'un (S)Vcd\n/device\t\tOuvre le périphérique vidéo par défaut\n/open\t\tOuvre le fichier et met MPC-HC en pause\n/play\t\tOuvre le fichier et commence la lecture\n/close\t\tQuitte automatiquement après la lecture\n/shutdown\tÉteint la machine après la lecture\n/standby\t\tMet la machine en veille après la lecture\n/hibernate\tMet la machine en veille prolongée après la lecture\n/logoff\t\tDéconnecte la session après la lecture\n/lock\t\tVerrouille la session après la lecture\n/monitoroff\tÉteint l'écran après la lecture\n/playnext\t\tOuvre le fichier suivant dans le répertoire après la lecture\n/fullscreen\tDémarre en plein écran\n/minimized\tDémarre en mode minimisé\n/new\t\tDémarre une nouvelle instance de MPC-HC\n/add\t\tAjoute un fichier à la playlist\n/randomize\tTrie aléatoirement la liste de lecture\n/regvid\t\tAssocie les formats vidéo à MPC-HC\n/regaud\t\tAssocie les formats audio à MPC-HC\n/regpl\t\tAssocie les listes de lecture à MPC-HC\n/regall\t\tAssocie tous les fichiers supportés à MPC-HC\n/unregall\t\tSupprime l'association des fichiers à MPC-HC\n/start ms\t\tDémarre la lecture à \"ms\" (millisecondes)\n/startpos hh:mm:ss\tStart playing at position hh:mm:ss\n/fixedsize L,H\tFixe la taille de la fenêtre vidéo à LxH\n/monitor N\tDémarre MPC-HC sur l'écran N (N à partir de 1)\n/audiorenderer N\tUtiliser le moteur de rendu audio N, où N commence à partir de 1\n\t\t(cf. \"Sortie audio\" dans les options)\n/shaderpreset \"Pr\"\tUtiliser la présélection d'effets vidéo \"Pr\"\n/pns \"nom\"\tSpécifie la présélection \"Pan & Scan\" à utiliser\n/iconsassoc\tRéassocie les icônes spécifiques aux formats\n/nofocus\t\tDémarre MPC-HC en arrière-plan\n/webport N\tDémarre l'interface web sur le port spécifié\n/debug\t\tAffiche des informations de débogage via l'OSD\n/nominidump\tDésactive la création de minidump\n/slave \"hWnd\"\tDémarre MPC-HC en mode \"esclave\"\n/reset\t\tRestaure les paramètres par défaut\n/help /h /?\tAffiche l'aide pour les options de la ligne de commande\n"
+msgid "Usage: mpc-hc.exe \"pathname\" [switches]\n\n\"pathname\"\tThe main file or directory to be loaded (wildcards\n\t\tallowed, \"-\" denotes standard input)\n/dub \"dubname\"\tLoad an additional audio file\n/dubdelay \"file\"\tLoad an additional audio file shifted with XXms (if\n\t\tthe file contains \"...DELAY XXms...\")\n/d3dfs\t\tStart rendering in D3D fullscreen mode\n/sub \"subname\"\tLoad an additional subtitle file\n/filter \"filtername\"\tLoad DirectShow filters from a dynamic link\n\t\tlibrary (wildcards allowed)\n/dvd\t\tRun in dvd mode, \"pathname\" means the dvd\n\t\tfolder (optional)\n/dvdpos T#C\tStart playback at title T, chapter C\n/dvdpos T#hh:mm\tStart playback at title T, position hh:mm:ss\n/cd\t\tLoad all the tracks of an audio cd or (s)vcd,\n\t\t\"pathname\" means the drive path (optional)\n/device\t\tOpen the default video device\n/open\t\tOpen the file, don't automatically start playback\n/play\t\tStart playing the file as soon the player is\n\t\tlaunched\n/close\t\tClose the player after playback (only works when\n\t\tused with /play)\n/shutdown\tShutdown the operating system after playback\n/standby\t\tPut the operating system in standby mode after playback\n/hibernate\tHibernate operating system after playback\n/logoff\t\tLog off after playback\n/lock\t\tLock workstation after playback\n/monitoroff\tTurn off the monitor after playback\n/playnext\t\tOpen next file in the folder after playback\n/fullscreen\tStart in full-screen mode\n/minimized\tStart in minimized mode\n/new\t\tUse a new instance of the player\n/add\t\tAdd \"pathname\" to playlist, can be combined\n\t\twith /open and /play\n/randomize\tRandomize the playlist\n/regvid\t\tCreate file associations for video files\n/regaud\t\tCreate file associations for audio files\n/regpl\t\tCreate file associations for playlist files\n/regall\t\tCreate file associations for all supported file types\n/unregall\t\tRemove all file associations\n/start ms\t\tStart playing at \"ms\" (= milliseconds)\n/startpos hh:mm:ss\tStart playing at position hh:mm:ss\n/fixedsize w,h\tSet a fixed window size\n/monitor N\tStart player on monitor N, where N starts from 1\n/audiorenderer N\tStart using audiorenderer N, where N starts from 1\n\t\t(see \"Output\" settings)\n/shaderpreset \"Pr\"\tStart using \"Pr\" shader preset\n/pns \"name\"\tSpecify Pan&Scan preset name to use\n/iconsassoc\tReassociate format icons\n/nofocus\t\tOpen MPC-HC in background\n/webport N\tStart web interface on specified port\n/debug\t\tShow debug information in OSD\n/nocrashreporter\tDisable the crash reporter\n/slave \"hWnd\"\tUse MPC-HC as slave\n/reset\t\tRestore default settings\n/help /h /?\tShow help about command line switches\n"
+msgstr "Utilisation : mpc-hc.exe \"chemin du fichier\" [options]\n\n\"chemin du fichier\"\tFichier principal ou répertoire à charger (jokers\n\t\tautorisés, \"-\" désigne l'entrée standard)\n/dub \"fichier audio\"\tCharge un fichier audio supplémentaire\n/dubdelay \"fichier\"\tCharge un fichier audio avec décalage de XXms (si\n\t\tle nom contient \"...DELAY XXms...\")\n/d3dfs\t\tLance l'affichage en mode plein écran D3D (réduit le\n\t\t\"tearing\")\n/sub \"fichier ST\"\tCharge un fichier de sous-titres\n/filter \"nom\"\tCharge un filtre DirectShow à partir d'une DLL\n\t\t(jokers autorisés)\n/dvd\t\tDémarre en mode DVD (il est possible de fournir le\n\t\tnom du répertoire)\n/dvdpos T#C\tDémarre la lecture du titre T, à partir du chapitre C\n/dvdpos T#hh:mm\tDémarre la lecture du titre T, à partir de la position hh:mm:ss\n/cd\t\tCharge toutes les pistes d'un CD audio ou d'un (S)Vcd\n/device\t\tOuvre le périphérique vidéo par défaut\n/open\t\tOuvre le fichier et met MPC-HC en pause\n/play\t\tOuvre le fichier et commence la lecture\n/close\t\tQuitte automatiquement après la lecture\n/shutdown\tÉteint la machine après la lecture\n/standby\t\tMet la machine en veille après la lecture\n/hibernate\tMet la machine en veille prolongée après la lecture\n/logoff\t\tDéconnecte la session après la lecture\n/lock\t\tVerrouille la session après la lecture\n/monitoroff\tÉteint l'écran après la lecture\n/playnext\t\tOuvre le fichier suivant dans le répertoire après la lecture\n/fullscreen\tDémarre en plein écran\n/minimized\tDémarre en mode minimisé\n/new\t\tDémarre une nouvelle instance de MPC-HC\n/add\t\tAjoute un fichier à la playlist\n/randomize\tTrie aléatoirement la liste de lecture\n/regvid\t\tAssocie les formats vidéo à MPC-HC\n/regaud\t\tAssocie les formats audio à MPC-HC\n/regpl\t\tAssocie les listes de lecture à MPC-HC\n/regall\t\tAssocie tous les fichiers supportés à MPC-HC\n/unregall\t\tSupprime l'association des fichiers à MPC-HC\n/start ms\t\tDémarre la lecture à \"ms\" (millisecondes)\n/startpos hh:mm:ss\tStart playing at position hh:mm:ss\n/fixedsize L,H\tFixe la taille de la fenêtre vidéo à LxH\n/monitor N\tDémarre MPC-HC sur l'écran N (N à partir de 1)\n/audiorenderer N\tUtiliser le moteur de rendu audio N, où N commence à partir de 1\n\t\t(cf. \"Sortie audio\" dans les options)\n/shaderpreset \"Pr\"\tUtiliser la présélection d'effets vidéo \"Pr\"\n/pns \"nom\"\tSpécifie la présélection \"Pan & Scan\" à utiliser\n/iconsassoc\tRéassocie les icônes spécifiques aux formats\n/nofocus\t\tDémarre MPC-HC en arrière-plan\n/webport N\tDémarre l'interface web sur le port spécifié\n/debug\t\tAffiche des informations de débogage via l'OSD\n/nocrashreporter\tDésactive le rapporteur de plantage\n/slave \"hWnd\"\tDémarre MPC-HC en mode \"esclave\"\n/reset\t\tRestaure les paramètres par défaut\n/help /h /?\tAffiche l'aide pour les options de la ligne de commande\n"
 
 msgctxt "IDS_UNKNOWN_SWITCH"
 msgid "Unrecognized switch(es) found in command line string: \n\n"
@@ -2707,34 +2739,6 @@ msgstr "Haut arrière central"
 msgctxt "IDS_TOP_BACK_RIGHT"
 msgid "Top Back Right"
 msgstr "Haut arrière droit"
-
-msgctxt "IDS_AG_RESET_STATS"
-msgid "Reset Display Stats"
-msgstr "Remise à zéro des statistiques d'affichage"
-
-msgctxt "IDD_PPAGESUBMISC"
-msgid "Subtitles::Misc"
-msgstr "Sous-titres::Divers"
-
-msgctxt "IDS_VIEW_BORDERLESS"
-msgid "Hide &borders"
-msgstr "Cacher les &bordures"
-
-msgctxt "IDS_VIEW_FRAMEONLY"
-msgid "Frame Only"
-msgstr "Bordures uniquement"
-
-msgctxt "IDS_VIEW_CAPTIONMENU"
-msgid "Sho&w Caption&&Menu"
-msgstr "Afficher le &titre et le menu"
-
-msgctxt "IDS_VIEW_HIDEMENU"
-msgid "Hide &Menu"
-msgstr "Cacher le &menu"
-
-msgctxt "IDD_PPAGEADVANCED"
-msgid "Advanced"
-msgstr "Réglages expert"
 
 msgctxt "IDS_TIME_TOOLTIP_ABOVE"
 msgid "Above seek bar"

@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MPC-HC\n"
 "POT-Creation-Date: 2015-03-16 18:09:30+0000\n"
-"PO-Revision-Date: 2015-04-12 02:15+0000\n"
-"Last-Translator: Underground78\n"
+"PO-Revision-Date: 2015-04-28 02:32+0000\n"
+"Last-Translator: Daniel <danny34ever@yahoo.com>\n"
 "Language-Team: Romanian (http://www.transifex.com/projects/p/mpc-hc/language/ro/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -110,15 +110,15 @@ msgid "Enable custom channel mapping"
 msgstr "Activează repartizarea particularizată a canalelor "
 
 msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_STATIC1"
-msgid "Speaker configuration for "
-msgstr "Configurație a difuzoarelor pentru "
+msgid "Speaker configuration for"
+msgstr "Configurație a difuzoarelor pentru"
 
 msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_STATIC2"
 msgid "input channels:"
 msgstr "canale de intrare:"
 
 msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_STATIC3"
-msgid "Hold shift for immediate changes when clicking something "
+msgid "Hold shift for immediate changes when clicking something"
 msgstr "Țineți Shift apăsat pentru aplicarea imediată a schimbărilor când dați clic pe ceva"
 
 msgctxt "IDD_GOTO_DLG_CAPTION"
@@ -195,7 +195,7 @@ msgstr "Drepturi de autor © 2002-2015 vedeți Authors.txt"
 
 msgctxt "IDD_ABOUTBOX_IDC_STATIC"
 msgid "This program is freeware and released under the GNU General Public License."
-msgstr "Acesta program este gratuit și distribuit sub licența GNU General Public License."
+msgstr "Acest program este gratuit și distribuit sub licența GNU General Public License."
 
 msgctxt "IDD_ABOUTBOX_IDC_STATIC"
 msgid "English translation made by MPC-HC Team"
@@ -339,7 +339,7 @@ msgstr "Ține minte ultima dimensiune a ferestrei"
 
 msgctxt "IDD_PPAGEPLAYER_IDC_CHECK11"
 msgid "Remember last Pan-n-Scan Zoom"
-msgstr "Ține minte ultima focalizare a Pan && Scan"
+msgstr "Ține minte ultima scalare pentru Pan && Scan"
 
 msgctxt "IDD_PPAGEDVD_IDC_STATIC"
 msgid "\"Open DVD/BD\" behavior"
@@ -431,7 +431,7 @@ msgstr "Ieșire"
 
 msgctxt "IDD_PPAGEPLAYBACK_IDC_CHECK5"
 msgid "Auto-zoom:"
-msgstr "Auto-scalare"
+msgstr "Scalare automată"
 
 msgctxt "IDD_PPAGEPLAYBACK_IDC_STATIC2"
 msgid "Auto fit factor:"
@@ -523,7 +523,7 @@ msgstr "ms"
 
 msgctxt "IDD_PPAGESUBTITLES_IDC_STATIC"
 msgid "Texture settings (open the video again to see the changes)"
-msgstr "Setările texturei (deschideți fișierul video din nou pentru a vedea schimbările)"
+msgstr "Setări textură (deschideți fișierul video din nou pentru a vedea schimbările)"
 
 msgctxt "IDD_PPAGESUBTITLES_IDC_STATIC"
 msgid "Sub pictures to buffer:"
@@ -703,7 +703,7 @@ msgstr "Ascunde automat indicatorul mouse-ului în timpul redării în mod ferea
 
 msgctxt "IDD_PPAGEEXTERNALFILTERS_IDC_BUTTON1"
 msgid "Add Filter..."
-msgstr "Adaugă filtru..."
+msgstr "Adăugare filtru..."
 
 msgctxt "IDD_PPAGEEXTERNALFILTERS_IDC_BUTTON2"
 msgid "Remove"
@@ -1664,4 +1664,28 @@ msgstr "Ajutor pentru linia de comandă"
 msgctxt "IDD_CMD_LINE_HELP_IDOK"
 msgid "OK"
 msgstr "OK"
+
+msgctxt "IDD_CRASH_REPORTER_CAPTION"
+msgid "Crash reporter"
+msgstr ""
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC1"
+msgid "We are sorry, it seems MPC-HC just crashed. :(\n\nTo help us diagnose and fix the problem, a bug report will be sent. You can provide additional information if you want."
+msgstr ""
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC2"
+msgid "Email:"
+msgstr ""
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC3"
+msgid "Your email address is optional and will only be used if the developers need to contact you for more information."
+msgstr ""
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC4"
+msgid "Problem description (use English only):"
+msgstr ""
+
+msgctxt "IDD_CRASH_REPORTER_IDOK"
+msgid "OK"
+msgstr ""
 
